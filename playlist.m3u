@@ -1,0 +1,13 @@
+#EXTM3U
+#EXTINF:-1 tvg-name="ATV", ATV
+https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/atv/atv.m3u8?hash=f53d200471c33708ed88f54516f99489|Referer=https://canlitv.com/atv-canli&User-Agent=Mozilla/5.0
+#EXTINF:-1 tvg-name="Kanal D", Kanal D
+https://yayin2.canlitv.fun/live/kanald.stream/playlist.m3u8?hash=f53d200471c33708ed88f54516f99489|Referer=https://canlitv.com/kanal-d-canli-yayin&User-Agent=Mozilla/5.0
+#EXTINF:-1 tvg-name="Tv8", Tv8
+https://yayin2.canlitv.fun/live/tv-8.stream/playlist.m3u8?hash=f53d200471c33708ed88f54516f99489|Referer=https://canlitv.com/tv8-izle-4&User-Agent=Mozilla/5.0
+#EXTINF:-1 tvg-name="TRT Haber", TRT Haber
+https://tv-trthaber.medya.trt.com.tr/master.m3u8|Referer=https://canlitv.com/trt-haber-izle&User-Agent=Mozilla/5.0
+#EXTINF:-1 tvg-name="DMAX", DMAX
+https://yayin2.canlitv.fun/live/dmax.stream/playlist.m3u8?hash=f53d200471c33708ed88f54516f99489|Referer=https://canlitv.com/dmax-canli-yayin&User-Agent=Mozilla/5.0
+#EXTINF:-1 tvg-name="Minika Go", Minika Go
+https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/minikago/minikago.m3u8?hash=f53d200471c33708ed88f54516f99489|Referer=https://canlitv.com/minika-go-izle&User-Agent=Mozilla/5.0
