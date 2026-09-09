@@ -1,9 +1,84 @@
 import json
-import sys
+import asyncio
+import urllib.request
 from urllib.parse import urljoin
-from playwright.sync_api import sync_playwright
+from playwright.async_api import async_playwright
 
-def run():
+# Eyni vaxtda paralel yoxlanılacaq kanal sayı
+CONCURRENCY_LIMIT = 5
+
+def is_stream_alive(url, referer):
+    """Linkin canlı və işlək olduğunu, telif/404 almadığını 2 saniyəyə yoxlayır"""
+    try:
+        req = urllib.request.Request(
+            url,
+            headers={
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
+                "Referer": referer
+            }
+        )
+        with urllib.request.urlopen(req, timeout=2.5) as resp:
+            # Əgər status 200-dürsə və içində HLS açarları varsa kanal aktivdir
+            return resp.status == 200
+    except Exception:
+        return False
+
+async def check_channel(sem, context, name, ch_url, idx, total):
+    async with sem:
+        found_stream = None
+
+        def handle_request(req):
+            nonlocal found_stream
+            u = req.url
+            if (".m3u8" in u or "playlist.m3u8" in u or "chunklist" in u) and not found_stream:
+                if not u.endswith(".js") and not u.endswith(".css"):
+                    found_stream = u
+
+        page = await context.new_page()
+        # Reklam, şəkil və şriftləri dərhal bloklayırıq (maksimum sürət üçün)
+        await page.route("**/*.{png,jpg,jpeg,svg,gif,webp,woff,woff2,css}", lambda r: r.abort())
+        page.on("request", handle_request)
+
+        print(f"[{idx}/{total}] Yoxlanılır: {name} ...", end=" ", flush=True)
+
+        try:
+            await page.goto(ch_url, timeout=6000, wait_until="commit")
+            await asyncio.sleep(1.2)
+
+            # İframe və pleyer daxilindəki gizli videoları oyadırıq
+            for frame in page.frames:
+                try:
+                    await frame.evaluate("""() => {
+                        const v = document.querySelector('video');
+                        if (v) { v.muted = true; v.play(); }
+                    }""")
+                except Exception:
+                    pass
+
+            await asyncio.sleep(1.0)
+        except Exception:
+            pass
+        finally:
+            await page.close()
+
+        # Link tapıldısa, telif və ya ölüm vəziyyətini yoxlayırıq
+        if found_stream:
+            # Canlı test
+            loop = asyncio.get_event_loop()
+            alive = await loop.run_in_executor(None, is_stream_alive, found_stream, ch_url)
+            
+            if alive:
+                print("AKTİV (Əlavə edildi)", flush=True)
+                tv_link = f"{found_stream}|Referer={ch_url}&User-Agent=Mozilla/5.0"
+                return f'#EXTINF:-1 tvg-name="{name}", {name}\n{tv_link}'
+            else:
+                print("ÖLÜ / TELİF (Keçildi)", flush=True)
+                return None
+        else:
+            print("YAYIM YOXDUR (Keçildi)", flush=True)
+            return None
+
+async def main():
     with open("config.json", "r", encoding="utf-8") as f:
         config = json.load(f)
 
@@ -12,88 +87,73 @@ def run():
         print("Sayt linki tapılmadı!", flush=True)
         return
 
-    m3u_lines = ["#EXTM3U"]
-
-    with sync_playwright() as p:
-        browser = p.chromium.launch(
+    async with async_playwright() as p:
+        browser = await p.chromium.launch(
             headless=True,
-            args=["--autoplay-policy=no-user-gesture-required", "--no-sandbox"]
+            args=[
+                "--autoplay-policy=no-user-gesture-required",
+                "--no-sandbox",
+                "--disable-gpu",
+                "--blink-settings=imagesEnabled=false"
+            ]
         )
-        context = browser.new_context(
+        context = await browser.new_context(
             user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
         )
-        
-        # Şəkilləri və reklam fontlarını bloklayırıq ki, səhifələr 1 saniyəyə açılsın
-        page = context.new_page()
-        page.route("**/*.{png,jpg,jpeg,svg,gif,webp,woff,woff2}", lambda route: route.abort())
 
-        print(f"Əsas sayta daxil olunur: {target_site}", flush=True)
+        print(f"Əsas səhifə açılır: {target_site}", flush=True)
+        page = await context.new_page()
         try:
-            page.goto(target_site, timeout=30000)
-            page.wait_for_timeout(2000)
+            await page.goto(target_site, timeout=25000, wait_until="domcontentloaded")
         except Exception as e:
-            print(f"Əsas səhifə açılmadı: {e}", flush=True)
-            browser.close()
+            print(f"Xəta: {e}", flush=True)
+            await browser.close()
             return
 
-        elements = page.query_selector_all("a")
+        # Səhifəni sürətlə aşağı fırladıb bütün 200 kanalı yükləyirik
+        print("Kanallar siyahıya alınır...", flush=True)
+        for _ in range(7):
+            await page.mouse.wheel(0, 5000)
+            await asyncio.sleep(0.6)
+
+        elements = await page.query_selector_all("a")
         channel_links = {}
 
         for el in elements:
-            href = el.get_attribute("href")
-            title = el.inner_text().strip()
+            href = await el.get_attribute("href")
+            title = await el.inner_text()
             
-            if href and ("izle" in href or "canli" in href) and not href.startswith("#"):
+            if href and ("canli" in href or "izle" in href) and not href.startswith("#"):
                 full_url = urljoin(target_site, href)
-                clean_name = title.split("\n")[0].strip() if title else href.split("/")[-2].replace("-", " ").title()
-                if len(clean_name) > 1 and full_url not in channel_links.values():
-                    channel_links[clean_name] = full_url
+                if full_url != target_site and full_url not in channel_links.values():
+                    raw_name = title.split("\n")[0].strip() if title else href.strip("/").split("/")[-1].replace("-", " ").title()
+                    clean_name = raw_name.replace("Canlı", "").replace("İzle", "").strip()
+                    if len(clean_name) > 1:
+                        channel_links[clean_name] = full_url
 
-        print(f"Tapılan potensial kanallar: {len(channel_links)} ədəd\n", flush=True)
+        await page.close()
+        total = len(channel_links)
+        print(f"Tapılan ümumi kanal: {total}\n---", flush=True)
 
+        sem = asyncio.Semaphore(CONCURRENCY_LIMIT)
+        tasks = []
+        idx = 1
         for name, ch_url in channel_links.items():
-            found_stream = None
+            tasks.append(check_channel(sem, context, name, ch_url, idx, total))
+            idx += 1
 
-            def handle_request(request):
-                nonlocal found_stream
-                url = request.url
-                if (".m3u8" in url or "playlist" in url or "chunklist" in url) and not found_stream:
-                    if not url.endswith(".js") and not url.endswith(".css"):
-                        found_stream = url
+        # Bütün kanalları eyni anda paralel emal edirik
+        results = await asyncio.gather(*tasks)
+        await browser.close()
 
-            ch_page = context.new_page()
-            ch_page.route("**/*.{png,jpg,jpeg,svg,gif,webp,woff,woff2}", lambda route: route.abort())
-            ch_page.on("request", handle_request)
-
-            print(f"Yoxlanılır: {name} ...", end=" ", flush=True)
-            try:
-                ch_page.goto(ch_url, timeout=15000)
-                ch_page.wait_for_timeout(1000)
-                ch_page.mouse.click(350, 250)
-                ch_page.evaluate("""() => {
-                    const v = document.querySelector('video');
-                    if (v) { v.muted = true; v.play(); }
-                }""")
-                ch_page.wait_for_timeout(2500)
-            except Exception:
-                pass
-
-            ch_page.close()
-
-            if found_stream:
-                print("TAPILDI!", flush=True)
-                tv_link = f"{found_stream}|Referer={ch_url}&User-Agent=Mozilla/5.0"
-                m3u_lines.append(f'#EXTINF:-1 tvg-name="{name}", {name}')
-                m3u_lines.append(tv_link)
-            else:
-                print("yoxdur", flush=True)
-
-        browser.close()
+    # Yalnız aktiv və canlı kanalları fayla yazırıq
+    active_channels = [r for r in results if r]
+    m3u_content = "#EXTM3U\n" + "\n".join(active_channels)
 
     with open("playlist.m3u", "w", encoding="utf-8") as f:
-        f.write("\n".join(m3u_lines))
+        f.write(m3u_content)
 
-    print("\nTamamlandı! Bütün kanallar playlist.m3u faylına yazıldı.", flush=True)
+    print(f"\nProses bitdi! {total} kanaldan {len(active_channels)} ədədi aktiv çıxdı və playlist.m3u faylına yazıldı.", flush=True)
 
 if __name__ == "__main__":
-    run()
+    asyncio.run(main())
