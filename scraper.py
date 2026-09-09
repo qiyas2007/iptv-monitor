@@ -1,27 +1,9 @@
 import json
 import asyncio
-import urllib.request
 from urllib.parse import urljoin
 from playwright.async_api import async_playwright
 
-# Eyni vaxtda paralel yoxlanılacaq kanal sayı
-CONCURRENCY_LIMIT = 5
-
-def is_stream_alive(url, referer):
-    """Linkin canlı və işlək olduğunu, telif/404 almadığını 2 saniyəyə yoxlayır"""
-    try:
-        req = urllib.request.Request(
-            url,
-            headers={
-                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
-                "Referer": referer
-            }
-        )
-        with urllib.request.urlopen(req, timeout=2.5) as resp:
-            # Əgər status 200-dürsə və içində HLS açarları varsa kanal aktivdir
-            return resp.status == 200
-    except Exception:
-        return False
+CONCURRENCY_LIMIT = 4
 
 async def check_channel(sem, context, name, ch_url, idx, total):
     async with sem:
@@ -31,51 +13,43 @@ async def check_channel(sem, context, name, ch_url, idx, total):
             nonlocal found_stream
             u = req.url
             if (".m3u8" in u or "playlist.m3u8" in u or "chunklist" in u) and not found_stream:
-                if not u.endswith(".js") and not u.endswith(".css"):
+                if not any(u.endswith(ext) for ext in [".js", ".css", ".html", ".png", ".jpg", ".svg"]):
                     found_stream = u
 
         page = await context.new_page()
-        # Reklam, şəkil və şriftləri dərhal bloklayırıq (maksimum sürət üçün)
         await page.route("**/*.{png,jpg,jpeg,svg,gif,webp,woff,woff2,css}", lambda r: r.abort())
         page.on("request", handle_request)
 
-        print(f"[{idx}/{total}] Yoxlanılır: {name} ...", end=" ", flush=True)
+        print(f"[{idx}/{total}] {name} ...", end=" ", flush=True)
 
         try:
-            await page.goto(ch_url, timeout=6000, wait_until="commit")
-            await asyncio.sleep(1.2)
+            await page.goto(ch_url, timeout=9000, wait_until="commit")
+            await asyncio.sleep(1.5)
 
-            # İframe və pleyer daxilindəki gizli videoları oyadırıq
+            # Səhifədəki və iframe daxilindəki video/audio elementlərini işə salırıq
             for frame in page.frames:
                 try:
                     await frame.evaluate("""() => {
-                        const v = document.querySelector('video');
-                        if (v) { v.muted = true; v.play(); }
+                        document.querySelectorAll('video, audio').forEach(v => {
+                            v.muted = true;
+                            v.play();
+                        });
                     }""")
                 except Exception:
                     pass
 
-            await asyncio.sleep(1.0)
+            await asyncio.sleep(1.5)
         except Exception:
             pass
         finally:
             await page.close()
 
-        # Link tapıldısa, telif və ya ölüm vəziyyətini yoxlayırıq
         if found_stream:
-            # Canlı test
-            loop = asyncio.get_event_loop()
-            alive = await loop.run_in_executor(None, is_stream_alive, found_stream, ch_url)
-            
-            if alive:
-                print("AKTİV (Əlavə edildi)", flush=True)
-                tv_link = f"{found_stream}|Referer={ch_url}&User-Agent=Mozilla/5.0"
-                return f'#EXTINF:-1 tvg-name="{name}", {name}\n{tv_link}'
-            else:
-                print("ÖLÜ / TELİF (Keçildi)", flush=True)
-                return None
+            print("TAPILDI", flush=True)
+            tv_link = f"{found_stream}|Referer={ch_url}&User-Agent=Mozilla/5.0"
+            return f'#EXTINF:-1 tvg-name="{name}", {name}\n{tv_link}'
         else:
-            print("YAYIM YOXDUR (Keçildi)", flush=True)
+            print("yoxdur", flush=True)
             return None
 
 async def main():
@@ -101,39 +75,56 @@ async def main():
             user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
         )
 
-        print(f"Əsas səhifə açılır: {target_site}", flush=True)
+        print(f"Əsas sayta daxil olunur: {target_site}", flush=True)
         page = await context.new_page()
         try:
-            await page.goto(target_site, timeout=25000, wait_until="domcontentloaded")
+            await page.goto(target_site, timeout=30000, wait_until="domcontentloaded")
+            await asyncio.sleep(2)
         except Exception as e:
             print(f"Xəta: {e}", flush=True)
             await browser.close()
             return
 
-        # Səhifəni sürətlə aşağı fırladıb bütün 200 kanalı yükləyirik
-        print("Kanallar siyahıya alınır...", flush=True)
-        for _ in range(7):
-            await page.mouse.wheel(0, 5000)
-            await asyncio.sleep(0.6)
+        # 1. Saytdakı bütün menyu və kateqoriya linklərini toplayırıq
+        cat_elements = await page.query_selector_all("a")
+        category_urls = set([target_site])
 
-        elements = await page.query_selector_all("a")
+        for cat in cat_elements:
+            href = await cat.get_attribute("href")
+            if href and any(k in href for k in ["kategori", "tur", "kanallar", "azerbaycan", "ulusal", "haber", "spor"]):
+                full_cat = urljoin(target_site, href)
+                if target_site in full_cat:
+                    category_urls.add(full_cat)
+
+        print(f"Tapılan kateqoriya səhifələri: {len(category_urls)} ədəd", flush=True)
+
+        # 2. Hər kateqoriyanı açıb oradakı kanalları siyahıya yığırıq
         channel_links = {}
+        for c_url in list(category_urls)[:12]: # Əsas 12 kateqoriyanı yoxlayır
+            try:
+                await page.goto(c_url, timeout=12000, wait_until="domcontentloaded")
+                # Scroll edərək səhifəni tam açırıq
+                for _ in range(4):
+                    await page.mouse.wheel(0, 3500)
+                    await asyncio.sleep(0.4)
 
-        for el in elements:
-            href = await el.get_attribute("href")
-            title = await el.inner_text()
-            
-            if href and ("canli" in href or "izle" in href) and not href.startswith("#"):
-                full_url = urljoin(target_site, href)
-                if full_url != target_site and full_url not in channel_links.values():
-                    raw_name = title.split("\n")[0].strip() if title else href.strip("/").split("/")[-1].replace("-", " ").title()
-                    clean_name = raw_name.replace("Canlı", "").replace("İzle", "").strip()
-                    if len(clean_name) > 1:
-                        channel_links[clean_name] = full_url
+                elements = await page.query_selector_all("a")
+                for el in elements:
+                    href = await el.get_attribute("href")
+                    title = await el.inner_text()
+                    if href and ("canli" in href or "izle" in href) and not href.startswith("#"):
+                        full_ch = urljoin(target_site, href)
+                        if full_ch not in channel_links.values() and full_ch != target_site:
+                            raw_name = title.split("\n")[0].strip() if title else href.strip("/").split("/")[-1].replace("-", " ").title()
+                            clean_name = raw_name.replace("Canlı", "").replace("İzle", "").replace("HD", "").strip()
+                            if len(clean_name) > 1 and "Kategori" not in clean_name and "Televizyon" not in clean_name:
+                                channel_links[clean_name] = full_ch
+            except Exception:
+                continue
 
         await page.close()
         total = len(channel_links)
-        print(f"Tapılan ümumi kanal: {total}\n---", flush=True)
+        print(f"\nÜmumi çıxarılan unikal kanal sayı: {total}\n" + "="*40, flush=True)
 
         sem = asyncio.Semaphore(CONCURRENCY_LIMIT)
         tasks = []
@@ -142,18 +133,16 @@ async def main():
             tasks.append(check_channel(sem, context, name, ch_url, idx, total))
             idx += 1
 
-        # Bütün kanalları eyni anda paralel emal edirik
         results = await asyncio.gather(*tasks)
         await browser.close()
 
-    # Yalnız aktiv və canlı kanalları fayla yazırıq
     active_channels = [r for r in results if r]
     m3u_content = "#EXTM3U\n" + "\n".join(active_channels)
 
     with open("playlist.m3u", "w", encoding="utf-8") as f:
         f.write(m3u_content)
 
-    print(f"\nProses bitdi! {total} kanaldan {len(active_channels)} ədədi aktiv çıxdı və playlist.m3u faylına yazıldı.", flush=True)
+    print(f"\nTamamlandı! {total} kanaldan {len(active_channels)} ədədi uğurla playlist.m3u faylına əlavə olundu.", flush=True)
 
 if __name__ == "__main__":
     asyncio.run(main())
