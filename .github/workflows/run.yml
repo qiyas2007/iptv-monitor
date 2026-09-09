@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Kodu yüklə
+      - name: Kodu çək
         uses: actions/checkout@v4
 
       - name: Python quraşdır
@@ -21,23 +21,15 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Playwright yüklə
+      - name: Kanalları oxu və M3U yarat
         run: |
-          python -m pip install --upgrade pip
-          pip install playwright
-          playwright install chromium --with-deps
-
-      - name: Kanalları axtar və M3U yarat
-        run: |
-          python -u scraper.py
+          python scraper.py
 
       - name: playlist.m3u faylını göndər
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
-          git fetch origin main
-          git reset --soft origin/main || true
           git add playlist.m3u
-          git commit -m "Auto-update playlist [skip ci]" || echo "Dəyişiklik yoxdur"
-          git push origin main --force
+          # Dəyişiklik olmasa belə xəta vermədən keçməsi üçün:
+          git diff --staged --quiet || git commit -m "Auto-update playlist [skip ci]"
+          git push origin main || echo "Push ediləcək yeni dəyişiklik tapılmadı"
