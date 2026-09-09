@@ -1,12 +1,10 @@
 [
   {
     "name": "CBC Sport",
-    "url": "https://cbcsports-live.lg.mncdn.com/cbcsports_live/cbcsports/playlist.m3u8",
-    "referrer": "https://cbcsport.az/",
-    "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
+    "url": "https://cbcsports-live.lg.mncdn.com/cbcsports_live/cbcsports/playlist.m3u8|Referer=https://cbcsport.az/&User-Agent=Mozilla/5.0"
   },
   {
     "name": "Space TV",
-    "url": "https://proxy.hdtvcanli.com/https://yayin2.canlitv.fun/live/spacetv.stream/playlist.m3u8?hash=62d73cfb044b604a7f9b3f95709b5440"
+    "url": "https://stream.spacetv.az/hls/live.m3u8"
   }
 ]
