@@ -1,121 +1,66 @@
-import asyncio
 import json
-import re
-from pathlib import Path
-from urllib.parse import urlparse
+import os
+from playwright.sync_api import sync_playwright
 
-from playwright.async_api import async_playwright
+def main():
+    json_path = "channels.json"
+    output_dir = "output"
+    output_file = os.path.join(output_dir, "channels.m3u")
+    
+    os.makedirs(output_dir, exist_ok=True)
+    
+    if not os.path.exists(json_path):
+        print(f"Xəta: {json_path} tapılmadı!")
+        return
 
-BASE = Path(__file__).resolve().parent
-CHANNELS_FILE = BASE / "channels.json"
-OUTPUT_DIR = BASE / "output"
-OUTPUT_FILE = OUTPUT_DIR / "channels.m3u"
+    with open(json_path, "r", encoding="utf-8") as f:
+        channels = json.load(f)
 
-# Səhifənin player-i gec yüklənirsə bunu artır.
-WAIT_AFTER_LOAD_SECONDS = 8
+    m3u_lines = ["#EXTM3U"]
 
-# Eyni səhifədə bir neçə playlist tapıla bilər.
-# Sadə seçim qaydası: son tapılan m3u8.
-M3U8_RE = re.compile(r"\.m3u8(?:[?#]|$)", re.I)
+    with sync_playwright() as p:
+        browser = p.chromium.launch(headless=True)
+        context = browser.new_context(user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36")
+        
+        for ch in channels:
+            name = ch.get("name", "Kanal")
+            url = ch.get("page_url", "")
+            found_stream = None
 
+            if not url:
+                continue
 
-def load_channels():
-    with CHANNELS_FILE.open("r", encoding="utf-8") as f:
-        data = json.load(f)
+            print(f"Yoxlanılır: {name} -> {url}")
+            page = context.new_page()
 
-    if not isinstance(data, list):
-        raise ValueError("channels.json list formatında olmalıdır.")
+            def handle_request(request):
+                nonlocal found_stream
+                if ".m3u8" in request.url and not found_stream:
+                    found_stream = request.url
 
-    return data
+            page.on("request", handle_request)
 
+            try:
+                page.goto(url, timeout=30000)
+                page.wait_for_timeout(5000)
+            except Exception as e:
+                print(f"Səhifə açılmadı: {url} ({e})")
 
-def is_m3u8(url: str) -> bool:
-    return bool(M3U8_RE.search(url))
+            page.close()
 
+            if found_stream:
+                print(f"Tapıldı: {found_stream}")
+                m3u_lines.append(f'#EXTINF:-1,{name}')
+                m3u_lines.append(found_stream)
+            else:
+                print(f"Tapılmadı: {name}")
 
-def make_extinf(name: str) -> str:
-    safe_name = name.replace("\n", " ").strip()
-    return f"#EXTINF:-1,{safe_name}"
+        browser.close()
 
-
-async def capture_channel(browser, channel):
-    name = channel["name"]
-    page_url = channel["page_url"]
-
-    page = await browser.new_page()
-    found = []
-
-    async def on_request(request):
-        url = request.url
-        if is_m3u8(url):
-            found.append(url)
-
-    page.on("request", on_request)
-
-    try:
-        await page.goto(page_url, wait_until="domcontentloaded", timeout=60_000)
-        await page.wait_for_timeout(WAIT_AFTER_LOAD_SECONDS * 1000)
-
-        # Player-in başlanmasına kömək edə biləcək adi hərəkət.
-        # Heç bir auth/DRM bypass edilmir.
-        try:
-            await page.mouse.move(400, 300)
-            await page.mouse.click(400, 300)
-        except Exception:
-            pass
-
-        await page.wait_for_timeout(3_000)
-
-        # Təkrarlanan URL-ləri saxlamadan sonuncunu seçirik.
-        unique = list(dict.fromkeys(found))
-        if not unique:
-            return name, page_url, None, "m3u8 tapılmadı"
-
-        return name, page_url, unique[-1], None
-
-    except Exception as exc:
-        return name, page_url, None, str(exc)
-
-    finally:
-        await page.close()
-
-
-async def main():
-    channels = load_channels()
-    OUTPUT_DIR.mkdir(exist_ok=True)
-
-    async with async_playwright() as p:
-        browser = await p.chromium.launch(
-            headless=True,
-            args=["--disable-dev-shm-usage"]
-        )
-
-        results = []
-        for index, channel in enumerate(channels, start=1):
-            print(f"[{index}/{len(channels)}] {channel['name']}")
-            result = await capture_channel(browser, channel)
-            results.append(result)
-
-        await browser.close()
-
-    lines = ["#EXTM3U"]
-    ok = 0
-
-    for name, page_url, stream_url, error in results:
-        if stream_url:
-            lines.append(make_extinf(name))
-            lines.append(stream_url)
-            ok += 1
-            print(f"  OK: {stream_url}")
-        else:
-            print(f"  FAIL: {error} | {page_url}")
-
-    OUTPUT_FILE.write_text("\n".join(lines) + "\n", encoding="utf-8")
-
-    print()
-    print(f"Yeniləndi: {OUTPUT_FILE}")
-    print(f"Tapılan kanallar: {ok}/{len(channels)}")
-
+    with open(output_file, "w", encoding="utf-8") as f:
+        f.write("\n".join(m3u_lines))
+    
+    print(f"Uğurla yazıldı: {output_file}")
 
 if __name__ == "__main__":
-    asyncio.run(main())
+    main()
