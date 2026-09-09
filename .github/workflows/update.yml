@@ -26,9 +26,9 @@ jobs:
           pip install playwright
           playwright install chromium --with-deps
 
-      - name: Monitor işə sal
+      - name: Monitor işə sal və xətanı göstər
         run: |
-          python monitor.py
+          python monitor.py || (echo "PYTHON_SCRIPT_ERROR: Skript işləyərkən xəta baş verdi!" && exit 1)
 
       - name: M3U yadda saxla və göndər
         run: |
