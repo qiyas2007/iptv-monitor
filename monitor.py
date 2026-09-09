@@ -23,12 +23,13 @@ def main():
 
     for ch in channels:
         name = ch.get("name", "Kanal")
-        url = ch.get("stream_url", "") # Birbaşa m3u8 linkini oxuyur
+        # Həm stream_url, həm də page_url yazılsın fərq etməz, ikisini də oxuyur
+        url = ch.get("stream_url", "") or ch.get("page_url", "")
 
         if not url:
             continue
 
-        print(f"Əlavə olundu: {name}")
+        print(f"Əlavə olundu: {name} -> {url}")
         m3u_lines.append(f'#EXTINF:-1,{name}')
         m3u_lines.append(url)
 
