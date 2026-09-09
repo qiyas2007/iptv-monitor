@@ -9,3 +9,11 @@ https://rtmp.baku.tv/hls/bakutv_480p.m3u8
 https://cbcsports-live.lg.mncdn.com/cbcsports_live/cbcsports/chunklist.m3u8|Referer=https://cbcsport.az/&User-Agent=Mozilla/5.0
 #EXTINF:-1 tvg-name="İctimai TV", İctimai TV
 https://live.itv.az/itv.m3u8
+#EXTINF:-1 group-title="Milli",Space TV
+https://yayin2.canlitv.fun/live/spacetv.stream/playlist.m3u8?hash=60d55cfb12dfea1087a2ed7b28282928
+#EXTINF:-1 group-title="Milli",Xezer Tv
+https://yayin2.canlitv.fun/live/xezertv.stream/playlist.m3u8?hash=60d55cfb12dfea1087a2ed7b28282928
+#EXTINF:-1 tvg-id="ShowTV.tr" tvg-logo="http://assets.tvcdn.net/9d873881-bb5e-40f0-88db-8c47aa215e5a.png" group-title="Ulusal",Show TV
+http://ciner.daioncdn.net/showtv/showtv_1080p.m3u8?app=showtv_web
+#EXTINF:-1 group-title="Azeri" tvg-id="IctimaiTV.az@SD",Ictimai TV
+https://live.itv.az/itv.m3u8
