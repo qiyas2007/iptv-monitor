@@ -8,7 +8,7 @@ def fetch_html(url):
     try:
         req = urllib.request.Request(
             url,
-            headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"}
+            headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"}
         )
         with urllib.request.urlopen(req, timeout=10) as resp:
             return resp.read().decode('utf-8', errors='ignore')
@@ -27,14 +27,14 @@ def main():
     m3u_lines = ["#EXTM3U"]
     all_channels = {}
 
-    print(f"Bütün kanallar axtarılır: {target_site}", flush=True)
+    print(f"Bütün kanallar toplanır: {target_site}", flush=True)
 
-    # 1. Saytın sitemap və ya bütün səhifələrindən regex ilə bütün kanal linklərini dərhal çəkirik
     html = fetch_html(target_site)
     if not html:
-        html = fetch_html(f"{target_site}/televizyonlar")
+        print("Sayt kodunu oxumaq mümkün olmadı!", flush=True)
+        return
 
-    # Bütün mümkün kanal url formatlarını çıxarırıq
+    # Səhifədəki bütün kanal keçidlərini toplayırıq
     matches = re.findall(r'href=["\'](/[^"\']*(?:canli|izle|tv)[^"\']*)["\']', html, re.IGNORECASE)
     matches += re.findall(r'href=["\'](https?://[^"\']*(?:canli|izle)[^"\']*)["\']', html, re.IGNORECASE)
 
@@ -47,16 +47,20 @@ def main():
         if len(name) > 1 and full != target_site:
             all_channels[name] = full
 
-    print(f"Ümumi aşkar edilən kanal sayı: {len(all_channels)} ədəd", flush=True)
+    print(f"Tapılan ümumi kanal: {len(all_channels)} ədəd\n", flush=True)
 
-    # 2. Hər bir kanalın yayımını sürətlə əldə edirik
     with sync_playwright() as p:
         browser = p.chromium.launch(
             headless=True,
-            args=["--autoplay-policy=no-user-gesture-required", "--no-sandbox", "--disable-gpu"]
+            args=[
+                "--autoplay-policy=no-user-gesture-required",
+                "--no-sandbox",
+                "--disable-web-security"
+            ]
         )
         context = browser.new_context(
-            user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+            user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
+            viewport={"width": 1280, "height": 720}
         )
 
         idx = 1
@@ -68,35 +72,52 @@ def main():
             def handle_req(req):
                 nonlocal stream_url
                 u = req.url
+                # m3u8 və ya playlist aşkar edildikdə tuturuq
                 if (".m3u8" in u or "playlist" in u or "chunklist" in u) and not stream_url:
-                    if not any(u.endswith(ext) for ext in [".js", ".css", ".html", ".png", ".jpg"]):
+                    if not any(u.endswith(ext) for ext in [".js", ".css", ".html", ".png", ".jpg", ".svg", ".ts"]):
                         stream_url = u
 
             page = context.new_page()
-            page.route("**/*.{png,jpg,jpeg,svg,gif,webp,woff,woff2,css}", lambda r: r.abort())
             page.on("request", handle_req)
 
             print(f"[{idx}/{total}] {name} ...", end=" ", flush=True)
             try:
-                page.goto(url, timeout=7000, wait_until="commit")
-                page.wait_for_timeout(1200)
+                # Səhifənin DOM kodunun yüklənməsini gözləyirik
+                page.goto(url, timeout=12000, wait_until="domcontentloaded")
+                page.wait_for_timeout(2000)
 
+                # 1. Pleyerin üzərinə real klik atırıq (Pleyer adətən səhifənin mərkəzində olur)
+                page.mouse.click(640, 360)
+
+                # 2. İframe və ya birbaşa səhifədəki videonu 'play' edirik
                 for frame in page.frames:
                     try:
                         frame.evaluate("""() => {
                             const v = document.querySelector('video');
-                            if (v) { v.muted = true; v.play(); }
+                            if (v) {
+                                v.muted = true;
+                                v.play();
+                            }
+                            // Bəzi saytlarda play düyməsi class-la olur
+                            const btn = document.querySelector('.vjs-big-play-button, .jw-display-icon-container, #play, .play-btn');
+                            if (btn) btn.click();
                         }""")
                     except Exception:
                         pass
-                page.wait_for_timeout(1000)
+
+                # m3u8 sorğusunun şəbəkəyə düşməsi üçün 3 saniyə möhlət
+                for _ in range(6):
+                    if stream_url:
+                        break
+                    page.wait_for_timeout(500)
+
             except Exception:
                 pass
             finally:
                 page.close()
 
             if stream_url:
-                print("TAPILDI", flush=True)
+                print("TAPILDI!", flush=True)
                 tv_link = f"{stream_url}|Referer={url}&User-Agent=Mozilla/5.0"
                 m3u_lines.append(f'#EXTINF:-1 tvg-name="{name}", {name}')
                 m3u_lines.append(tv_link)
@@ -110,7 +131,7 @@ def main():
     with open("playlist.m3u", "w", encoding="utf-8") as f:
         f.write("\n".join(m3u_lines))
 
-    print(f"\nUğurla tamamlandı! playlist.m3u faylına {len(m3u_lines) // 2} kanal yazıldı.", flush=True)
+    print(f"\nUğurla tamamlandı! playlist.m3u faylına cəmi {len(m3u_lines) // 2} kanal yazıldı.", flush=True)
 
 if __name__ == "__main__":
     main()
