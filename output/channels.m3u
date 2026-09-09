@@ -8,4 +8,4 @@ https://rtmp.baku.tv/hls/bakutv_480p.m3u8
 #EXTINF:-1 tvg-name="CBC Sport", CBC Sport
 https://cbcsports-live.lg.mncdn.com/cbcsports_live/cbcsports/chunklist.m3u8|Referer=https://cbcsport.az/&User-Agent=Mozilla/5.0
 #EXTINF:-1 tvg-name="İctimai TV", İctimai TV
-https://bstelevision.com/proxy.php?url=https%3A%2F%2Fst2.mediabay.tv%2FIctimaiTV%2Ftracks-v4a1%2Fmono.m3u8%3F_t%3D1788969314%26token%3D522ccb953d1902ec66c8d428a705d66789a75a35-386162a0f2a32190070dd9690a66cbb0-1788979813-1788969013
+https://live.itv.az/itv.m3u8?bandwidth=1700&shift=0
