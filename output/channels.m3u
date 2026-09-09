@@ -1,7 +1,5 @@
 #EXTM3U
 #EXTINF:-1 tvg-name="CBC Sport", CBC Sport
-#EXTVLCOPT:http-referrer=https://cbcsport.az/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36
-https://cbcsports-live.lg.mncdn.com/cbcsports_live/cbcsports/playlist.m3u8
+https://cbcsports-live.lg.mncdn.com/cbcsports_live/cbcsports/playlist.m3u8|Referer=https://cbcsport.az/&User-Agent=Mozilla/5.0
 #EXTINF:-1 tvg-name="Space TV", Space TV
-https://proxy.hdtvcanli.com/https://yayin2.canlitv.fun/live/spacetv.stream/playlist.m3u8?hash=62d73cfb044b604a7f9b3f95709b5440
+https://stream.spacetv.az/hls/live.m3u8
