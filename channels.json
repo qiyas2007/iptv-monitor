@@ -1,10 +1,22 @@
 [
   {
-    "name": "CBC Sport",
-    "url": "https://cbcsports-live.lg.mncdn.com/cbcsports_live/cbcsports/playlist.m3u8|Referer=https://cbcsport.az/&User-Agent=Mozilla/5.0"
+    "name": "ATV Azerbaijan",
+    "url": "https://lives.atv.az:5443/ATV_TV_STREAM/streams/atvcanli.m3u8"
   },
   {
-    "name": "Space TV",
-    "url": "https://stream.spacetv.az/hls/live.m3u8"
+    "name": "AzTV",
+    "url": "https://str.yodacdn.net/azertv/tracks-v3a1/mono.ts.m3u8?token=eyJpcCI6Ijg1LjEzMi4xMS4xMTgiLCJ1YSI6Ik1vemlsbGEvNS4wIChXaW5kb3dzIE5UIDEwLjA7IFdpbjY0OyB4NjQpIEFwcGxlV2ViS2l0LzUzNy4zNiAoS0hUTUwsIGxpa2UgR2Vja28pIENocm9tZS8xNTIuMC4wLjAgU2FmYXJpLzUzNy4zNiIsImV4cCI6MTc4ODk3MjI3MywianRpIjoiNzVkMjJkODczZGU0Y2RmOCJ9.stE1SfmvlEDt5eS1JhRyZj8Ppb9Aiih14axUXeryJeE%3D"
+  },
+  {
+    "name": "Baku TV",
+    "url": "https://rtmp.baku.tv/hls/bakutv_480p.m3u8"
+  },
+  {
+    "name": "CBC Sport",
+    "url": "https://cbcsports-live.lg.mncdn.com/cbcsports_live/cbcsports/chunklist.m3u8|Referer=https://cbcsport.az/&User-Agent=Mozilla/5.0"
+  },
+  {
+    "name": "İctimai TV",
+    "url": "https://live.itv.az/itv.m3u8?bandwidth=1700&shift=0"
   }
 ]
