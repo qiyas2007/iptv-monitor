@@ -1,0 +1,40 @@
+name: Auto Scrape IPTV
+
+on:
+  schedule:
+    - cron: '0 * * * *' # Hər saatın əvvəlində işə düşür
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  scrape-and-update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Kodu çək
+        uses: actions/checkout@v4
+
+      - name: Python quraşdır
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Asılılıqları yüklə
+        run: |
+          pip install playwright
+          playwright install chromium --with-deps
+
+      - name: Kanalları tap və M3U yarat
+        run: |
+          python scraper.py
+
+      - name: Dəyişiklikləri yadda saxla və göndər
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+          git add playlist.m3u
+          git commit -m "Auto-update playlist [skip ci]" || echo "Dəyişiklik yoxdur"
+          git push origin main
