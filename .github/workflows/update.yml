@@ -35,6 +35,7 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+          git fetch origin main
+          git pull --rebase origin main || true
           git add output/channels.m3u
-          git commit -m "Auto-update playlist" || echo "Dəyişiklik yoxdur"
-          git push origin main --force
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-update playlist" && git push origin main)
