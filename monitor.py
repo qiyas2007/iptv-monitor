@@ -13,8 +13,12 @@ def main():
         print(f"Xəta: {json_path} tapılmadı!")
         return
 
-    with open(json_path, "r", encoding="utf-8") as f:
-        channels = json.load(f)
+    try:
+        with open(json_path, "r", encoding="utf-8") as f:
+            channels = json.load(f)
+    except Exception as e:
+        print(f"JSON oxunmadı: {e}")
+        return
 
     m3u_lines = ["#EXTM3U"]
 
