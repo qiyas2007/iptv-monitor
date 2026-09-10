@@ -173,7 +173,7 @@
   },
   {
     "name": "Ictimai TV",
-    "url": "https://live.itv.az/itv.m3u8"
+    "url": "https://live.itv.az/itv.m3u8?bandwidth=1700&shift=0"
   },
   {
     "name": "Kanal S",
@@ -317,11 +317,11 @@
   },
   {
     "name": "Space TV",
-    "url": "https://yayin2.canlitv.fun/live/spacetv.stream/chunklist_w313161487.m3u8?hash=62d73cfb044b604a7f9b3f95709b5440"
+    "url": "https://tuzcu.canlitv.vin/spacetv.m3u8?tkn=kZ7lqWjbHK5n71UeMc0qgA&tms=1789059592&hst=www.canlitv.vin&ip=85.132.11.118&utkn=8c7c6ee15ecb51e94c718ee31a6249f2&ch=space-tv"
   },
   {
     "name": "Atv Azad TV",
-    "url": "https://yayin2.canlitv.fun/live/atvazad.stream/playlist.m3u8?hash=60d55cfb12dfea1087a2ed7b28282928"
+    "url": "https://lives.atv.az:5443/ATV_TV_STREAM/streams/atvcanli.m3u8"
   },
   {
     "name": "ARB TV",
@@ -337,7 +337,7 @@
   },
   {
     "name": "Medeniyet Tv",
-    "url": "https://yayin2.canlitv.fun/live/medeniyettv.stream/playlist.m3u8?hash=60d55cfb12dfea1087a2ed7b28282928"
+    "url": "https://hatun.canlitv.vin/medeniyettv.m3u8?tkn=z7s7vx-P6gx29EbW9PzP2A&tms=1789059735&hst=www.canlitv.vin&ip=85.132.11.118&utkn=8c7c6ee15ecb51e94c718ee31a6249f2&ch=medeniyet-tv"
   },
   {
     "name": "Gunaz Tv",
@@ -349,7 +349,7 @@
   },
   {
     "name": "Dunya TV",
-    "url": "https://yayin2.canlitv.fun/live/dunyatv.stream/playlist.m3u8?hash=60d55cfb12dfea1087a2ed7b28282928"
+    "url": "https://stream.dunyatv.az/live/dunyatv.m3u8"
   },
   {
     "name": "Az Star TV",
@@ -357,7 +357,7 @@
   },
   {
     "name": "Tv8",
-    "url": "https://yayin2.canlitv.fun/live/tv-8.stream/playlist.m3u8?hash=60d55cfb12dfea1087a2ed7b28282928"
+    "url": "https://nene.canlitv.vin/tv8.m3u8?tkn=ntLdJTnoMfNLnP6BPUffpw&tms=1789059810&hst=www.canlitv.vin&ip=85.132.11.118&utkn=8c7c6ee15ecb51e94c718ee31a6249f2&ch=tv8canli-hd"
   },
   {
     "name": "TLC",
