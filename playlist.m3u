@@ -86,7 +86,7 @@ https://str.yodacdn.net/azertv/index.m3u8
 #EXTINF:-1 tvg-name="Baku.TV", Baku.TV
 https://rtmp.baku.tv/hls/bakutv.m3u8
 #EXTINF:-1 tvg-name="Ictimai TV", Ictimai TV
-https://live.itv.az/itv.m3u8
+https://live.itv.az/itv.m3u8?bandwidth=1700&shift=0
 #EXTINF:-1 tvg-name="Kanal S", Kanal S
 https://lives.atv.az:5443/KANAL-S/streams/kanals.m3u8
 #EXTINF:-1 tvg-name="Kapaz TV", Kapaz TV
@@ -158,9 +158,9 @@ http://stream.mcquack.net/240/index.m3u8
 #EXTINF:-1 tvg-name="viju+ Premiere HD", viju+ Premiere HD
 http://stream.mcquack.net/202/index.m3u8
 #EXTINF:-1 tvg-name="Space TV", Space TV
-https://yayin2.canlitv.fun/live/spacetv.stream/chunklist_w313161487.m3u8?hash=62d73cfb044b604a7f9b3f95709b5440
+https://tuzcu.canlitv.vin/spacetv.m3u8?tkn=kZ7lqWjbHK5n71UeMc0qgA&tms=1789059592&hst=www.canlitv.vin&ip=85.132.11.118&utkn=8c7c6ee15ecb51e94c718ee31a6249f2&ch=space-tv
 #EXTINF:-1 tvg-name="Atv Azad TV", Atv Azad TV
-https://yayin2.canlitv.fun/live/atvazad.stream/playlist.m3u8?hash=60d55cfb12dfea1087a2ed7b28282928
+https://lives.atv.az:5443/ATV_TV_STREAM/streams/atvcanli.m3u8
 #EXTINF:-1 tvg-name="ARB TV", ARB TV
 https://yayin2.canlitv.fun/live/arb.stream/playlist.m3u8?hash=60d55cfb12dfea1087a2ed7b28282928
 #EXTINF:-1 tvg-name="ARB Gunes TV", ARB Gunes TV
@@ -168,17 +168,17 @@ https://yayin2.canlitv.fun/live/arbgunes.stream/playlist.m3u8?hash=60d55cfb12dfe
 #EXTINF:-1 tvg-name="ARB 24 TV", ARB 24 TV
 https://yayin2.canlitv.fun/live/arb24.stream/playlist.m3u8?hash=60d55cfb12dfea1087a2ed7b28282928
 #EXTINF:-1 tvg-name="Medeniyet Tv", Medeniyet Tv
-https://yayin2.canlitv.fun/live/medeniyettv.stream/playlist.m3u8?hash=60d55cfb12dfea1087a2ed7b28282928
+https://hatun.canlitv.vin/medeniyettv.m3u8?tkn=z7s7vx-P6gx29EbW9PzP2A&tms=1789059735&hst=www.canlitv.vin&ip=85.132.11.118&utkn=8c7c6ee15ecb51e94c718ee31a6249f2&ch=medeniyet-tv
 #EXTINF:-1 tvg-name="Gunaz Tv", Gunaz Tv
 https://tv.gunaz.tv/hls/live.m3u8
 #EXTINF:-1 tvg-name="CBC Tv", CBC Tv
 https://yayin2.canlitv.fun/live/cbc.stream/playlist.m3u8?hash=60d55cfb12dfea1087a2ed7b28282928
 #EXTINF:-1 tvg-name="Dunya TV", Dunya TV
-https://yayin2.canlitv.fun/live/dunyatv.stream/playlist.m3u8?hash=60d55cfb12dfea1087a2ed7b28282928
+https://stream.dunyatv.az/live/dunyatv.m3u8
 #EXTINF:-1 tvg-name="Az Star TV", Az Star TV
 https://live.livestreamtv.ca/azstar/amlst:azstar/tracks-v1a1/mono.m3u8?hash=60d55cfb12dfea1087a2ed7b28282928
 #EXTINF:-1 tvg-name="Tv8", Tv8
-https://yayin2.canlitv.fun/live/tv-8.stream/playlist.m3u8?hash=60d55cfb12dfea1087a2ed7b28282928
+https://nene.canlitv.vin/tv8.m3u8?tkn=ntLdJTnoMfNLnP6BPUffpw&tms=1789059810&hst=www.canlitv.vin&ip=85.132.11.118&utkn=8c7c6ee15ecb51e94c718ee31a6249f2&ch=tv8canli-hd
 #EXTINF:-1 tvg-name="TLC", TLC
 https://yayin2.canlitv.fun/live/tlc.stream/playlist.m3u8?hash=60d55cfb12dfea1087a2ed7b28282928
 #EXTINF:-1 tvg-name="DMAX", DMAX
