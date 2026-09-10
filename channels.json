@@ -1,10 +1,10 @@
 [
   {
-    "name": "TRT 1",
-    "url": "https://trt.daioncdn.net/trt-1/master.m3u8?app=web"
+    "name": "CBC SPORT",
+    "url": "https://cbcsports-live.lg.mncdn.com/cbcsports_live/cbcsports/chunklist.m3u8"
   },
   {
-    "name": "TRT 1 (Alternativ)",
+    "name": "TRT 1 ",
     "url": "https://tv-trt1.medya.trt.com.tr/master_480.m3u8"
   },
   {
@@ -317,7 +317,7 @@
   },
   {
     "name": "Space TV",
-    "url": "https://yayin2.canlitv.fun/live/spacetv.stream/playlist.m3u8?hash=60d55cfb12dfea1087a2ed7b28282928"
+    "url": "https://yayin2.canlitv.fun/live/spacetv.stream/chunklist_w313161487.m3u8?hash=62d73cfb044b604a7f9b3f95709b5440"
   },
   {
     "name": "Atv Azad TV",
