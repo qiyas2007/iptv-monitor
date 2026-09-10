@@ -1,187 +1,374 @@
-#EXTM3U
-#EXTINF:-1 tvg-name="TRT 1", TRT 1
-https://trt.daioncdn.net/trt-1/master.m3u8?app=web
-#EXTINF:-1 tvg-name="TRT 1 (Alternativ)", TRT 1 (Alternativ)
-https://tv-trt1.medya.trt.com.tr/master_480.m3u8
-#EXTINF:-1 tvg-name="ATV", ATV
-https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/atv/atv.m3u8
-#EXTINF:-1 tvg-name="Show TV", Show TV
-http://ciner.daioncdn.net/showtv/showtv_1080p.m3u8?app=showtv_web
-#EXTINF:-1 tvg-name="Star-TV", Star-TV
-https://dogus.daioncdn.net/startv/startv.m3u8?app=a20ac41e-bdc3-4aa1-934d-26b484480ac9
-#EXTINF:-1 tvg-name="Kanal D", Kanal D
-https://demiroren.daioncdn.net/kanald/kanald_1080p.m3u8?app=kanald_web
-#EXTINF:-1 tvg-name="Euro D", Euro D
-http://live.duhnet.tv/S2/HLS_LIVE/eurodnp/playlist.m3u8
-#EXTINF:-1 tvg-name="Now TV", Now TV
-http://uycyyuuzyh.turknet.ercdn.net/nphindgytw/nowtv/nowtv.m3u8
-#EXTINF:-1 tvg-name="Kanal 7", Kanal 7
-https://kanal7-live.daioncdn.net/kanal7/kanal7.m3u8
-#EXTINF:-1 tvg-name="TRT Turk", TRT Turk
-https://tv-trtturk.medya.trt.com.tr/master.m3u8
-#EXTINF:-1 tvg-name="Beyaz TV", Beyaz TV
-https://beyaztv-live.daioncdn.net/beyaztv/beyaztv.m3u8
-#EXTINF:-1 tvg-name="Meltem TV", Meltem TV
-http://vhxyrsly.rocketcdn.com/meltemtv/playlist.m3u8
-#EXTINF:-1 tvg-name="TV4", TV4
-http://turkmedya-live.ercdn.net/tv4/tv4_720p.m3u8
-#EXTINF:-1 tvg-name="TRT Haber", TRT Haber
-https://tv-trthaber.medya.trt.com.tr/master.m3u8
-#EXTINF:-1 tvg-name="TGRT Haber", TGRT Haber
-https://canli.tgrthaber.com/tgrt.m3u8
-#EXTINF:-1 tvg-name="Haberturk", Haberturk
-https://tv.ensonhaber.com/haberturk/haberturk.m3u8
-#EXTINF:-1 tvg-name="Haber Global", Haber Global
-https://tv.ensonhaber.com/haberglobal/haberglobal.m3u8
-#EXTINF:-1 tvg-name="Halk TV", Halk TV
-https://halktv-live.daioncdn.net/halktv/halktv.m3u8
-#EXTINF:-1 tvg-name="NTV", NTV
-http://dygvideo.dygdigital.com/live/hls/ntv4puhu?m3u8
-#EXTINF:-1 tvg-name="A2", A2
-https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/a2tv/a2tv.m3u8
-#EXTINF:-1 tvg-name="TEVE2", TEVE2
-http://live.duhnet.tv/S2/HLS_LIVE/teve2np/playlist.m3u8
-#EXTINF:-1 tvg-name="Ciftci TV", Ciftci TV
-https://live.artidijitalmedya.com/artidijital_ciftcitv/ciftcitv/playlist.m3u8
-#EXTINF:-1 tvg-name="Tivi 6", Tivi 6
-https://live.artidijitalmedya.com/artidijital_tivi6/tivi6/playlist.m3u8
-#EXTINF:-1 tvg-name="Cine 1 TV", Cine 1 TV
-http://canliyayin.cine1.com.tr/memfs/cbaef080-a742-4644-9e9e-2b9f6a5103c3.m3u8
-#EXTINF:-1 tvg-name="Cine+", Cine+
-http://cineplus-yesilcam.supersatadmin.workers.dev/cineplusyesilcam.m3u8
-#EXTINF:-1 tvg-name="SDM TV", SDM TV
-https://host.onlineradyotv.net:8081/sdmtv/tracks-v1a1/mono.m3u8
-#EXTINF:-1 tvg-name="BEGEN TV", BEGEN TV
-https://ip44.radyotelekomtv.com:3958/stream/play.m3u8
-#EXTINF:-1 tvg-name="kanal-65", kanal-65
-https://autopilot.catcast.tv/mobile.m3u8?channel_id=47437&token=867e089ce518aabe7511d1eb104e3fc7&server=v2.catcast.tv
-#EXTINF:-1 tvg-name="now-music", now-music
-https://autopilot.catcast.tv/mobile.m3u8?channel_id=48694&token=7f374089f5809fe3e8ad7a0520fad55a&server=v2.catcast.tv
-#EXTINF:-1 tvg-name="rihatmusic", rihatmusic
-https://autopilot.catcast.tv/mobile.m3u8?channel_id=48076&token=6fd61e466f37dbf6c2de47140a5beb2d&server=v2.catcast.tv
-#EXTINF:-1 tvg-name="turkuzplay1", turkuzplay1
-https://autopilot.catcast.tv/mobile.m3u8?channel_id=48591&token=585fec45a75f0eff8af042e52efc2b85&server=v2.catcast.tv
-#EXTINF:-1 tvg-name="kino-1", kino-1
-https://autopilot.catcast.tv/mobile.m3u8?channel_id=38617&token=912b6a06f2771f7d5cfa53d27d3ab364&server=kino-1.catcast.tv
-#EXTINF:-1 tvg-name="Komedi-az-TV", Komedi-az-TV
-https://autopilot.catcast.tv/mobile.m3u8?channel_id=50370&token=35bf3b6f88d2049faac91ee53ffce4b9&server=v2.catcast.tv
-#EXTINF:-1 tvg-name="Strax-TV", Strax-TV
-https://s.catcast.tv/content/34816/index.m3u8?token=70def881322b841dd87696657874523d
-#EXTINF:-1 tvg-name="Fenix SSSR", Fenix SSSR
-https://autopilot.catcast.tv/mobile.m3u8?channel_id=40102&token=7985bf557ea0e302a5655823284b8011&server=v2.catcast.tv
-#EXTINF:-1 tvg-name="Detektiv-TV", Detektiv-TV
-https://autopilot.catcast.tv/mobile.m3u8?channel_id=41327&token=fdce9048317c5e2fb5d994aaab35a812&server=cityeden.catcast.tv
-#EXTINF:-1 tvg-name="Action-TV", Action-TV
-https://autopilot.catcast.tv/mobile.m3u8?channel_id=36517&token=6e29230a6d25c65dec2007d09339c33b&server=v2.catcast.tv
-#EXTINF:-1 tvg-name="PlayerCinema-TV", PlayerCinema-TV
-https://autopilot.catcast.tv/mobile.m3u8?channel_id=50372&token=182926c93b7f93095c2ba3614262ea8b&server=v2.catcast.tv
-#EXTINF:-1 tvg-name="PlayerFilmAzerbaycan-TV", PlayerFilmAzerbaycan-TV
-https://autopilot.catcast.tv/mobile.m3u8?channel_id=50472&token=e5aca65b24394d2381191dddc2f54467&server=v2.catcast.tv
-#EXTINF:-1 tvg-name="APA Tv", APA Tv
-http://stream.apa.tv/apastream/index.m3u8
-#EXTINF:-1 tvg-name="Ayaz TV", Ayaz TV
-https://janya-ayaztv.vgcdn.net/ptnr-WebApp/title-Ayaz_TV/v1/vglive-sk-934820/main.m3u8
-#EXTINF:-1 tvg-name="Az TV", Az TV
-https://str.yodacdn.net/azertv/index.m3u8
-#EXTINF:-1 tvg-name="Baku.TV", Baku.TV
-https://rtmp.baku.tv/hls/bakutv.m3u8
-#EXTINF:-1 tvg-name="Ictimai TV", Ictimai TV
-https://live.itv.az/itv.m3u8
-#EXTINF:-1 tvg-name="Kanal S", Kanal S
-https://lives.atv.az:5443/KANAL-S/streams/kanals.m3u8
-#EXTINF:-1 tvg-name="Kapaz TV", Kapaz TV
-http://85.132.78.122:8050/hls/stream/index.m3u8
-#EXTINF:-1 tvg-name="Medeniyyet TV", Medeniyyet TV
-https://str.yodacdn.net/medeniyyettele/index.m3u8
-#EXTINF:-1 tvg-name="Xezer TV", Xezer TV
-https://www.xezerxeber.az/stream/index.m3u8
-#EXTINF:-1 tvg-name="360 TV", 360 TV
-https://turkmedya-live.ercdn.net/tv360/tv360.m3u8
-#EXTINF:-1 tvg-name="Cinema", Cinema
-http://catchup.videoline.ru/cinema/playlist.m3u8
-#EXTINF:-1 tvg-name="Dom kino", Dom kino
-http://stream.mcquack.net/236/index.m3u8
-#EXTINF:-1 tvg-name="Evrokino HD", Evrokino HD
-http://stream.mcquack.net/385/index.m3u8
-#EXTINF:-1 tvg-name="Fox", Fox
-http://stream.mcquack.net/182/index.m3u8
-#EXTINF:-1 tvg-name="Hit HD", Hit HD
-http://hls127.freeott.top:8080/XitHD/video.m3u8
-#EXTINF:-1 tvg-name="Indiyskoye Kino", Indiyskoye Kino
-http://188.113.190.12/329/index.m3u8
-#EXTINF:-1 tvg-name="Kino TV HD", Kino TV HD
-http://176.118.197.101/KinoTvHD/playlist.m3u8
-#EXTINF:-1 tvg-name="KinoHit", KinoHit
-http://stream.mcquack.net/126/index.m3u8
-#EXTINF:-1 tvg-name="Kinokomedija", Kinokomedija
-http://stream.mcquack.net/265/index.m3u8
-#EXTINF:-1 tvg-name="Kinomix", Kinomix
-http://93.170.254.17/Kinomiks/index.m3u8
-#EXTINF:-1 tvg-name="Kinopokaz", Kinopokaz
-http://stream.mcquack.net/64/index.m3u8
-#EXTINF:-1 tvg-name="Kinopremyera", Kinopremyera
-http://5.188.159.128:8070/KINOPREMIERA/index.m3u8
-#EXTINF:-1 tvg-name="Kinosemja", Kinosemja
-http://stream.mcquack.net/170/index.m3u8
-#EXTINF:-1 tvg-name="Kinoseriya", Kinoseriya
-http://hls127.freeott.top:8080/Kinoseriya_HD/video.m3u8
-#EXTINF:-1 tvg-name="Muzhskoe kino", Muzhskoe kino
-http://stream.mcquack.net/107/index.m3u8
-#EXTINF:-1 tvg-name="National Geographic", National Geographic
-http://stream.mcquack.net/116/index.m3u8
-#EXTINF:-1 tvg-name="National Geographic Wild", National Geographic Wild
-http://hls127.freeott.top:8080/Nat_Geo_Wild_SD/video.m3u8
-#EXTINF:-1 tvg-name="Nauka", Nauka
-http://stream.mcquack.net/125/index.m3u8
-#EXTINF:-1 tvg-name="Ostrosyuzhetnoye HD", Ostrosyuzhetnoye HD
-http://stream.mcquack.net/214/index.m3u8
-#EXTINF:-1 tvg-name="Premialnoe HD", Premialnoe HD
-http://stream.mcquack.net/421/index.m3u8
-#EXTINF:-1 tvg-name="Priklyucheniya HD", Priklyucheniya HD
-http://stream.mcquack.net/198/index.m3u8
-#EXTINF:-1 tvg-name="viju Explore", viju Explore
-http://stream.mcquack.net/239/index.m3u8
-#EXTINF:-1 tvg-name="viju History", viju History
-http://178.124.179.122:8080/HistoryHD/index.m3u8
-#EXTINF:-1 tvg-name="viju Nature", viju Nature
-https://stream8.cinerama.uz/1228/tracks-v1a1/mono.m3u8
-#EXTINF:-1 tvg-name="viju TV1000", viju TV1000
-http://stream.mcquack.net/110/index.m3u8
-#EXTINF:-1 tvg-name="viju TV1000 action", viju TV1000 action
-http://stream.mcquack.net/100/index.m3u8
-#EXTINF:-1 tvg-name="viju+ Comedy HD", viju+ Comedy HD
-http://stream.mcquack.net/201/index.m3u8
-#EXTINF:-1 tvg-name="viju+ Megahit HD", viju+ Megahit HD
-http://stream.mcquack.net/200/index.m3u8
-#EXTINF:-1 tvg-name="viju+ Planet HD", viju+ Planet HD
-http://stream.mcquack.net/240/index.m3u8
-#EXTINF:-1 tvg-name="viju+ Premiere HD", viju+ Premiere HD
-http://stream.mcquack.net/202/index.m3u8
-#EXTINF:-1 tvg-name="Space TV", Space TV
-https://yayin2.canlitv.fun/live/spacetv.stream/playlist.m3u8?hash=60d55cfb12dfea1087a2ed7b28282928
-#EXTINF:-1 tvg-name="Atv Azad TV", Atv Azad TV
-https://yayin2.canlitv.fun/live/atvazad.stream/playlist.m3u8?hash=60d55cfb12dfea1087a2ed7b28282928
-#EXTINF:-1 tvg-name="ARB TV", ARB TV
-https://yayin2.canlitv.fun/live/arb.stream/playlist.m3u8?hash=60d55cfb12dfea1087a2ed7b28282928
-#EXTINF:-1 tvg-name="ARB Gunes TV", ARB Gunes TV
-https://yayin2.canlitv.fun/live/arbgunes.stream/playlist.m3u8?hash=60d55cfb12dfea1087a2ed7b28282928
-#EXTINF:-1 tvg-name="ARB 24 TV", ARB 24 TV
-https://yayin2.canlitv.fun/live/arb24.stream/playlist.m3u8?hash=60d55cfb12dfea1087a2ed7b28282928
-#EXTINF:-1 tvg-name="Medeniyet Tv", Medeniyet Tv
-https://yayin2.canlitv.fun/live/medeniyettv.stream/playlist.m3u8?hash=60d55cfb12dfea1087a2ed7b28282928
-#EXTINF:-1 tvg-name="Gunaz Tv", Gunaz Tv
-https://tv.gunaz.tv/hls/live.m3u8
-#EXTINF:-1 tvg-name="CBC Tv", CBC Tv
-https://yayin2.canlitv.fun/live/cbc.stream/playlist.m3u8?hash=60d55cfb12dfea1087a2ed7b28282928
-#EXTINF:-1 tvg-name="Dunya TV", Dunya TV
-https://yayin2.canlitv.fun/live/dunyatv.stream/playlist.m3u8?hash=60d55cfb12dfea1087a2ed7b28282928
-#EXTINF:-1 tvg-name="Az Star TV", Az Star TV
-https://live.livestreamtv.ca/azstar/amlst:azstar/tracks-v1a1/mono.m3u8?hash=60d55cfb12dfea1087a2ed7b28282928
-#EXTINF:-1 tvg-name="Tv8", Tv8
-https://yayin2.canlitv.fun/live/tv-8.stream/playlist.m3u8?hash=60d55cfb12dfea1087a2ed7b28282928
-#EXTINF:-1 tvg-name="TLC", TLC
-https://yayin2.canlitv.fun/live/tlc.stream/playlist.m3u8?hash=60d55cfb12dfea1087a2ed7b28282928
-#EXTINF:-1 tvg-name="DMAX", DMAX
-https://yayin2.canlitv.fun/live/dmax.stream/playlist.m3u8?hash=60d55cfb12dfea1087a2ed7b28282928
-#EXTINF:-1 tvg-name="TELE1", TELE1
-https://tele1-live.ercdn.net/tele1/tele1.m3u8?hash=60d55cfb12dfea1087a2ed7b28282928
+[
+  {
+    "name": "TRT 1",
+    "url": "https://trt.daioncdn.net/trt-1/master.m3u8?app=web"
+  },
+  {
+    "name": "TRT 1 (Alternativ)",
+    "url": "https://tv-trt1.medya.trt.com.tr/master_480.m3u8"
+  },
+  {
+    "name": "ATV",
+    "url": "https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/atv/atv.m3u8"
+  },
+  {
+    "name": "Show TV",
+    "url": "http://ciner.daioncdn.net/showtv/showtv_1080p.m3u8?app=showtv_web"
+  },
+  {
+    "name": "Star-TV",
+    "url": "https://dogus.daioncdn.net/startv/startv.m3u8?app=a20ac41e-bdc3-4aa1-934d-26b484480ac9"
+  },
+  {
+    "name": "Kanal D",
+    "url": "https://demiroren.daioncdn.net/kanald/kanald_1080p.m3u8?app=kanald_web"
+  },
+  {
+    "name": "Euro D",
+    "url": "http://live.duhnet.tv/S2/HLS_LIVE/eurodnp/playlist.m3u8"
+  },
+  {
+    "name": "Now TV",
+    "url": "http://uycyyuuzyh.turknet.ercdn.net/nphindgytw/nowtv/nowtv.m3u8"
+  },
+  {
+    "name": "Kanal 7",
+    "url": "https://kanal7-live.daioncdn.net/kanal7/kanal7.m3u8"
+  },
+  {
+    "name": "TRT Turk",
+    "url": "https://tv-trtturk.medya.trt.com.tr/master.m3u8"
+  },
+  {
+    "name": "Beyaz TV",
+    "url": "https://beyaztv-live.daioncdn.net/beyaztv/beyaztv.m3u8"
+  },
+  {
+    "name": "Meltem TV",
+    "url": "http://vhxyrsly.rocketcdn.com/meltemtv/playlist.m3u8"
+  },
+  {
+    "name": "TV4",
+    "url": "http://turkmedya-live.ercdn.net/tv4/tv4_720p.m3u8"
+  },
+  {
+    "name": "TRT Haber",
+    "url": "https://tv-trthaber.medya.trt.com.tr/master.m3u8"
+  },
+  {
+    "name": "TGRT Haber",
+    "url": "https://canli.tgrthaber.com/tgrt.m3u8"
+  },
+  {
+    "name": "Haberturk",
+    "url": "https://tv.ensonhaber.com/haberturk/haberturk.m3u8"
+  },
+  {
+    "name": "Haber Global",
+    "url": "https://tv.ensonhaber.com/haberglobal/haberglobal.m3u8"
+  },
+  {
+    "name": "Halk TV",
+    "url": "https://halktv-live.daioncdn.net/halktv/halktv.m3u8"
+  },
+  {
+    "name": "NTV",
+    "url": "http://dygvideo.dygdigital.com/live/hls/ntv4puhu?m3u8"
+  },
+  {
+    "name": "A2",
+    "url": "https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/a2tv/a2tv.m3u8"
+  },
+  {
+    "name": "TEVE2",
+    "url": "http://live.duhnet.tv/S2/HLS_LIVE/teve2np/playlist.m3u8"
+  },
+  {
+    "name": "Ciftci TV",
+    "url": "https://live.artidijitalmedya.com/artidijital_ciftcitv/ciftcitv/playlist.m3u8"
+  },
+  {
+    "name": "Tivi 6",
+    "url": "https://live.artidijitalmedya.com/artidijital_tivi6/tivi6/playlist.m3u8"
+  },
+  {
+    "name": "Cine 1 TV",
+    "url": "http://canliyayin.cine1.com.tr/memfs/cbaef080-a742-4644-9e9e-2b9f6a5103c3.m3u8"
+  },
+  {
+    "name": "Cine+",
+    "url": "http://cineplus-yesilcam.supersatadmin.workers.dev/cineplusyesilcam.m3u8"
+  },
+  {
+    "name": "SDM TV",
+    "url": "https://host.onlineradyotv.net:8081/sdmtv/tracks-v1a1/mono.m3u8"
+  },
+  {
+    "name": "BEGEN TV",
+    "url": "https://ip44.radyotelekomtv.com:3958/stream/play.m3u8"
+  },
+  {
+    "name": "kanal-65",
+    "url": "https://autopilot.catcast.tv/mobile.m3u8?channel_id=47437&token=867e089ce518aabe7511d1eb104e3fc7&server=v2.catcast.tv"
+  },
+  {
+    "name": "now-music",
+    "url": "https://autopilot.catcast.tv/mobile.m3u8?channel_id=48694&token=7f374089f5809fe3e8ad7a0520fad55a&server=v2.catcast.tv"
+  },
+  {
+    "name": "rihatmusic",
+    "url": "https://autopilot.catcast.tv/mobile.m3u8?channel_id=48076&token=6fd61e466f37dbf6c2de47140a5beb2d&server=v2.catcast.tv"
+  },
+  {
+    "name": "turkuzplay1",
+    "url": "https://autopilot.catcast.tv/mobile.m3u8?channel_id=48591&token=585fec45a75f0eff8af042e52efc2b85&server=v2.catcast.tv"
+  },
+  {
+    "name": "kino-1",
+    "url": "https://autopilot.catcast.tv/mobile.m3u8?channel_id=38617&token=912b6a06f2771f7d5cfa53d27d3ab364&server=kino-1.catcast.tv"
+  },
+  {
+    "name": "Komedi-az-TV",
+    "url": "https://autopilot.catcast.tv/mobile.m3u8?channel_id=50370&token=35bf3b6f88d2049faac91ee53ffce4b9&server=v2.catcast.tv"
+  },
+  {
+    "name": "Strax-TV",
+    "url": "https://s.catcast.tv/content/34816/index.m3u8?token=70def881322b841dd87696657874523d"
+  },
+  {
+    "name": "Fenix SSSR",
+    "url": "https://autopilot.catcast.tv/mobile.m3u8?channel_id=40102&token=7985bf557ea0e302a5655823284b8011&server=v2.catcast.tv"
+  },
+  {
+    "name": "Detektiv-TV",
+    "url": "https://autopilot.catcast.tv/mobile.m3u8?channel_id=41327&token=fdce9048317c5e2fb5d994aaab35a812&server=cityeden.catcast.tv"
+  },
+  {
+    "name": "Action-TV",
+    "url": "https://autopilot.catcast.tv/mobile.m3u8?channel_id=36517&token=6e29230a6d25c65dec2007d09339c33b&server=v2.catcast.tv"
+  },
+  {
+    "name": "PlayerCinema-TV",
+    "url": "https://autopilot.catcast.tv/mobile.m3u8?channel_id=50372&token=182926c93b7f93095c2ba3614262ea8b&server=v2.catcast.tv"
+  },
+  {
+    "name": "PlayerFilmAzerbaycan-TV",
+    "url": "https://autopilot.catcast.tv/mobile.m3u8?channel_id=50472&token=e5aca65b24394d2381191dddc2f54467&server=v2.catcast.tv"
+  },
+  {
+    "name": "APA Tv",
+    "url": "http://stream.apa.tv/apastream/index.m3u8"
+  },
+  {
+    "name": "Ayaz TV",
+    "url": "https://janya-ayaztv.vgcdn.net/ptnr-WebApp/title-Ayaz_TV/v1/vglive-sk-934820/main.m3u8"
+  },
+  {
+    "name": "Az TV",
+    "url": "https://str.yodacdn.net/azertv/index.m3u8"
+  },
+  {
+    "name": "Baku.TV",
+    "url": "https://rtmp.baku.tv/hls/bakutv.m3u8"
+  },
+  {
+    "name": "Ictimai TV",
+    "url": "https://live.itv.az/itv.m3u8"
+  },
+  {
+    "name": "Kanal S",
+    "url": "https://lives.atv.az:5443/KANAL-S/streams/kanals.m3u8"
+  },
+  {
+    "name": "Kapaz TV",
+    "url": "http://85.132.78.122:8050/hls/stream/index.m3u8"
+  },
+  {
+    "name": "Medeniyyet TV",
+    "url": "https://str.yodacdn.net/medeniyyettele/index.m3u8"
+  },
+  {
+    "name": "Xezer TV",
+    "url": "https://www.xezerxeber.az/stream/index.m3u8"
+  },
+  {
+    "name": "360 TV",
+    "url": "https://turkmedya-live.ercdn.net/tv360/tv360.m3u8"
+  },
+  {
+    "name": "Cinema",
+    "url": "http://catchup.videoline.ru/cinema/playlist.m3u8"
+  },
+  {
+    "name": "Dom kino",
+    "url": "http://stream.mcquack.net/236/index.m3u8"
+  },
+  {
+    "name": "Evrokino HD",
+    "url": "http://stream.mcquack.net/385/index.m3u8"
+  },
+  {
+    "name": "Fox",
+    "url": "http://stream.mcquack.net/182/index.m3u8"
+  },
+  {
+    "name": "Hit HD",
+    "url": "http://hls127.freeott.top:8080/XitHD/video.m3u8"
+  },
+  {
+    "name": "Indiyskoye Kino",
+    "url": "http://188.113.190.12/329/index.m3u8"
+  },
+  {
+    "name": "Kino TV HD",
+    "url": "http://176.118.197.101/KinoTvHD/playlist.m3u8"
+  },
+  {
+    "name": "KinoHit",
+    "url": "http://stream.mcquack.net/126/index.m3u8"
+  },
+  {
+    "name": "Kinokomedija",
+    "url": "http://stream.mcquack.net/265/index.m3u8"
+  },
+  {
+    "name": "Kinomix",
+    "url": "http://93.170.254.17/Kinomiks/index.m3u8"
+  },
+  {
+    "name": "Kinopokaz",
+    "url": "http://stream.mcquack.net/64/index.m3u8"
+  },
+  {
+    "name": "Kinopremyera",
+    "url": "http://5.188.159.128:8070/KINOPREMIERA/index.m3u8"
+  },
+  {
+    "name": "Kinosemja",
+    "url": "http://stream.mcquack.net/170/index.m3u8"
+  },
+  {
+    "name": "Kinoseriya",
+    "url": "http://hls127.freeott.top:8080/Kinoseriya_HD/video.m3u8"
+  },
+  {
+    "name": "Muzhskoe kino",
+    "url": "http://stream.mcquack.net/107/index.m3u8"
+  },
+  {
+    "name": "National Geographic",
+    "url": "http://stream.mcquack.net/116/index.m3u8"
+  },
+  {
+    "name": "National Geographic Wild",
+    "url": "http://hls127.freeott.top:8080/Nat_Geo_Wild_SD/video.m3u8"
+  },
+  {
+    "name": "Nauka",
+    "url": "http://stream.mcquack.net/125/index.m3u8"
+  },
+  {
+    "name": "Ostrosyuzhetnoye HD",
+    "url": "http://stream.mcquack.net/214/index.m3u8"
+  },
+  {
+    "name": "Premialnoe HD",
+    "url": "http://stream.mcquack.net/421/index.m3u8"
+  },
+  {
+    "name": "Priklyucheniya HD",
+    "url": "http://stream.mcquack.net/198/index.m3u8"
+  },
+  {
+    "name": "viju Explore",
+    "url": "http://stream.mcquack.net/239/index.m3u8"
+  },
+  {
+    "name": "viju History",
+    "url": "http://178.124.179.122:8080/HistoryHD/index.m3u8"
+  },
+  {
+    "name": "viju Nature",
+    "url": "https://stream8.cinerama.uz/1228/tracks-v1a1/mono.m3u8"
+  },
+  {
+    "name": "viju TV1000",
+    "url": "http://stream.mcquack.net/110/index.m3u8"
+  },
+  {
+    "name": "viju TV1000 action",
+    "url": "http://stream.mcquack.net/100/index.m3u8"
+  },
+  {
+    "name": "viju+ Comedy HD",
+    "url": "http://stream.mcquack.net/201/index.m3u8"
+  },
+  {
+    "name": "viju+ Megahit HD",
+    "url": "http://stream.mcquack.net/200/index.m3u8"
+  },
+  {
+    "name": "viju+ Planet HD",
+    "url": "http://stream.mcquack.net/240/index.m3u8"
+  },
+  {
+    "name": "viju+ Premiere HD",
+    "url": "http://stream.mcquack.net/202/index.m3u8"
+  },
+  {
+    "name": "Space TV",
+    "url": "https://yayin2.canlitv.fun/live/spacetv.stream/playlist.m3u8?hash=60d55cfb12dfea1087a2ed7b28282928"
+  },
+  {
+    "name": "Atv Azad TV",
+    "url": "https://yayin2.canlitv.fun/live/atvazad.stream/playlist.m3u8?hash=60d55cfb12dfea1087a2ed7b28282928"
+  },
+  {
+    "name": "ARB TV",
+    "url": "https://yayin2.canlitv.fun/live/arb.stream/playlist.m3u8?hash=60d55cfb12dfea1087a2ed7b28282928"
+  },
+  {
+    "name": "ARB Gunes TV",
+    "url": "https://yayin2.canlitv.fun/live/arbgunes.stream/playlist.m3u8?hash=60d55cfb12dfea1087a2ed7b28282928"
+  },
+  {
+    "name": "ARB 24 TV",
+    "url": "https://yayin2.canlitv.fun/live/arb24.stream/playlist.m3u8?hash=60d55cfb12dfea1087a2ed7b28282928"
+  },
+  {
+    "name": "Medeniyet Tv",
+    "url": "https://yayin2.canlitv.fun/live/medeniyettv.stream/playlist.m3u8?hash=60d55cfb12dfea1087a2ed7b28282928"
+  },
+  {
+    "name": "Gunaz Tv",
+    "url": "https://tv.gunaz.tv/hls/live.m3u8"
+  },
+  {
+    "name": "CBC Tv",
+    "url": "https://yayin2.canlitv.fun/live/cbc.stream/playlist.m3u8?hash=60d55cfb12dfea1087a2ed7b28282928"
+  },
+  {
+    "name": "Dunya TV",
+    "url": "https://yayin2.canlitv.fun/live/dunyatv.stream/playlist.m3u8?hash=60d55cfb12dfea1087a2ed7b28282928"
+  },
+  {
+    "name": "Az Star TV",
+    "url": "https://live.livestreamtv.ca/azstar/amlst:azstar/tracks-v1a1/mono.m3u8?hash=60d55cfb12dfea1087a2ed7b28282928"
+  },
+  {
+    "name": "Tv8",
+    "url": "https://yayin2.canlitv.fun/live/tv-8.stream/playlist.m3u8?hash=60d55cfb12dfea1087a2ed7b28282928"
+  },
+  {
+    "name": "TLC",
+    "url": "https://yayin2.canlitv.fun/live/tlc.stream/playlist.m3u8?hash=60d55cfb12dfea1087a2ed7b28282928"
+  },
+  {
+    "name": "DMAX",
+    "url": "https://yayin2.canlitv.fun/live/dmax.stream/playlist.m3u8?hash=60d55cfb12dfea1087a2ed7b28282928"
+  },
+  {
+    "name": "TELE1",
+    "url": "https://tele1-live.ercdn.net/tele1/tele1.m3u8?hash=60d55cfb12dfea1087a2ed7b28282928"
+  }
+]
