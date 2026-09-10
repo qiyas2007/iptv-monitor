@@ -1,7 +1,9 @@
 #EXTM3U
-#EXTINF:-1 tvg-name="TRT 1", TRT 1
-https://trt.daioncdn.net/trt-1/master.m3u8?app=web
-#EXTINF:-1 tvg-name="TRT 1 (Alternativ)", TRT 1 (Alternativ)
+#EXTINF:-1 tvg-name="cbc sports", cbcs ports
+https://cbcsports-live.lg.mncdn.com/cbcsports_live/cbcsports/chunklist.m3u8
+#EXTINF:-1 tvg-name="SPACE TV", SPACE TV
+https://yayin2.canlitv.fun/live/spacetv.stream/chunklist_w313161487.m3u8?hash=62d73cfb044b604a7f9b3f95709b5440
+#EXTINF:-1 tvg-name="", TRT 
 https://tv-trt1.medya.trt.com.tr/master_480.m3u8
 #EXTINF:-1 tvg-name="ATV", ATV
 https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/atv/atv.m3u8
