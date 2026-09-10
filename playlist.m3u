@@ -1,7 +1,7 @@
 #EXTM3U
-#EXTINF:-1 tvg-name="TRT 1", TRT 1
-https://trt.daioncdn.net/trt-1/master.m3u8?app=web
-#EXTINF:-1 tvg-name="TRT 1 (Alternativ)", TRT 1 (Alternativ)
+#EXTINF:-1 tvg-name="CBC SPORT", CBC SPORT
+https://cbcsports-live.lg.mncdn.com/cbcsports_live/cbcsports/chunklist.m3u8
+#EXTINF:-1 tvg-name="TRT 1 ", TRT 1 
 https://tv-trt1.medya.trt.com.tr/master_480.m3u8
 #EXTINF:-1 tvg-name="ATV", ATV
 https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/atv/atv.m3u8
@@ -158,7 +158,7 @@ http://stream.mcquack.net/240/index.m3u8
 #EXTINF:-1 tvg-name="viju+ Premiere HD", viju+ Premiere HD
 http://stream.mcquack.net/202/index.m3u8
 #EXTINF:-1 tvg-name="Space TV", Space TV
-https://yayin2.canlitv.fun/live/spacetv.stream/playlist.m3u8?hash=60d55cfb12dfea1087a2ed7b28282928
+https://yayin2.canlitv.fun/live/spacetv.stream/chunklist_w313161487.m3u8?hash=62d73cfb044b604a7f9b3f95709b5440
 #EXTINF:-1 tvg-name="Atv Azad TV", Atv Azad TV
 https://yayin2.canlitv.fun/live/atvazad.stream/playlist.m3u8?hash=60d55cfb12dfea1087a2ed7b28282928
 #EXTINF:-1 tvg-name="ARB TV", ARB TV
