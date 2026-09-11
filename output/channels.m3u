@@ -185,5 +185,13 @@ https://nene.canlitv.vin/tv8.m3u8?tkn=ntLdJTnoMfNLnP6BPUffpw&tms=1789059810&hst=
 https://yayin2.canlitv.fun/live/tlc.stream/playlist.m3u8?hash=60d55cfb12dfea1087a2ed7b28282928
 #EXTINF:-1 tvg-name="DMAX", DMAX
 https://yayin2.canlitv.fun/live/dmax.stream/playlist.m3u8?hash=60d55cfb12dfea1087a2ed7b28282928
+#EXTINF:-1 tvg-name="S SPORT", S SPORT
+https://corestream.d72377a9ds0ec24.cfd//s-sport/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-name="S SPORT PLUS", S SPORT PLUS
+https://andro.evrenesoglu99.click/checklist/androstreamlivessplus1.m3u8
+#EXTINF:-1 tvg-name="TİVİBU SPOR", TİVİBU SPOR
+https://andro.evrenesoglu99.click/checklist/androstreamlivets.m3u8
+#EXTINF:-1 tvg-name="TABİ SPOR", TABİ SPOR
+https://andro.evrenesoglu99.click/checklist/androstreamlivetb.m3u8
 #EXTINF:-1 tvg-name="TELE1", TELE1
 https://tele1-live.ercdn.net/tele1/tele1.m3u8?hash=60d55cfb12dfea1087a2ed7b28282928
