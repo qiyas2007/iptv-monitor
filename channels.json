@@ -320,6 +320,10 @@
     "url": "https://tuzcu.canlitv.vin/spacetv.m3u8?tkn=kZ7lqWjbHK5n71UeMc0qgA&tms=1789059592&hst=www.canlitv.vin&ip=85.132.11.118&utkn=8c7c6ee15ecb51e94c718ee31a6249f2&ch=space-tv"
   },
   {
+    "name": "Bein Sports",
+    "url": "https://sivrice.canlitv.me/beinsporthaber.m3u8?tkn=pQ5aKbHVZp5ruNoQzyE8qQ&tms=1789142591&hst=www.canlitv.me&ip=85.132.11.118&utkn=8c7c6ee15ecb51e94c718ee31a6249f2&ch=beinsportshaber-hd"
+  },
+  {
     "name": "Atv Azad TV",
     "url": "https://lives.atv.az:5443/ATV_TV_STREAM/streams/atvcanli.m3u8"
   },
