@@ -159,6 +159,8 @@ http://stream.mcquack.net/240/index.m3u8
 http://stream.mcquack.net/202/index.m3u8
 #EXTINF:-1 tvg-name="Space TV", Space TV
 https://tuzcu.canlitv.vin/spacetv.m3u8?tkn=kZ7lqWjbHK5n71UeMc0qgA&tms=1789059592&hst=www.canlitv.vin&ip=85.132.11.118&utkn=8c7c6ee15ecb51e94c718ee31a6249f2&ch=space-tv
+#EXTINF:-1 tvg-name="Bein Sports", Bein Sports
+https://sivrice.canlitv.me/beinsporthaber.m3u8?tkn=pQ5aKbHVZp5ruNoQzyE8qQ&tms=1789142591&hst=www.canlitv.me&ip=85.132.11.118&utkn=8c7c6ee15ecb51e94c718ee31a6249f2&ch=beinsportshaber-hd
 #EXTINF:-1 tvg-name="Atv Azad TV", Atv Azad TV
 https://lives.atv.az:5443/ATV_TV_STREAM/streams/atvcanli.m3u8
 #EXTINF:-1 tvg-name="ARB TV", ARB TV
