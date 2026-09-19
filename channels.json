@@ -148,12 +148,12 @@
     "url": "https://hatun.canlitv.me/idmantv.m3u8?tkn=raCHHVFUoHEA65wdZygSXQ&tms=1789860828&hst=www.canlitv.me&ip=85.132.11.118&utkn=78f40838c6b90658f985613c46b5701b&ch=idmantv-canli-hd"
   },
   {
-    "name": "PlayerCinema-TV",
-    "url": "https://autopilot.catcast.tv/mobile.m3u8?channel_id=50372&token=182926c93b7f93095c2ba3614262ea8b&server=v2.catcast.tv"
+    "name": " Euro Star",
+    "url": "https://tuzcu.canlitv.me/eurostar.m3u8?tkn=TwkphhhpN-5usnfn-bntUg&tms=1789861713&hst=www.canlitv.me&ip=85.132.11.118&utkn=78f40838c6b90658f985613c46b5701b&ch=eurostar-canli-hd"
   },
   {
-    "name": "PlayerFilmAzerbaycan-TV",
-    "url": "https://autopilot.catcast.tv/mobile.m3u8?channel_id=50472&token=e5aca65b24394d2381191dddc2f54467&server=v2.catcast.tv"
+    "name": "TRT 2",
+    "url": "https://cdn509.canlitv.me/trt2.m3u8?tkn=ERvxtVr6U8SZUQGxbZ1ARw&tms=1789861539&hst=www.canlitv.me&ip=85.132.11.118&utkn=78f40838c6b90658f985613c46b5701b&ch=trt2canlihd-izle"
   },
   {
     "name": "APA Tv",
@@ -196,8 +196,8 @@
     "url": "https://turkmedya-live.ercdn.net/tv360/tv360.m3u8"
   },
   {
-    "name": "Cinema",
-    "url": "http://catchup.videoline.ru/cinema/playlist.m3u8"
+    "name": " ATV Avrupa",
+    "url": "https://nene.canlitv.me/atvavrupa.m3u8?tkn=4Ycd5w-I8SNntlO5EkKOvA&tms=1789861841&hst=www.canlitv.me&ip=85.132.11.118&utkn=78f40838c6b90658f985613c46b5701b&ch=atvavrupa-canli"
   },
   {
     "name": "Dom kino",
@@ -260,8 +260,8 @@
     "url": "http://stream.mcquack.net/116/index.m3u8"
   },
   {
-    "name": "National Geographic Wild",
-    "url": "http://hls127.freeott.top:8080/Nat_Geo_Wild_SD/video.m3u8"
+    "name": " FB Tv",
+    "url": "https://tuzcu.canlitv.me/fbtv.m3u8?tkn=PyIMsbPoUjDXNoRUl0Jtyg&tms=1789862218&hst=www.canlitv.me&ip=85.132.11.118&utkn=78f40838c6b90658f985613c46b5701b&ch=fbtv"
   },
   {
     "name": "Nauka",
@@ -329,15 +329,15 @@
   },
   {
     "name": "ARB TV",
-    "url": "https://yayin2.canlitv.fun/live/arb.stream/playlist.m3u8?hash=60d55cfb12dfea1087a2ed7b28282928"
+    "url": "https://cdn509.canlitv.me/arbtv.m3u8?tkn=11XUly5yPxc56OJGS-IcaA&tms=1789862415&hst=www.canlitv.me&ip=85.132.11.118&utkn=78f40838c6b90658f985613c46b5701b&ch=arbtv-canli-hd"
   },
   {
     "name": "ARB Gunes TV",
-    "url": "https://yayin2.canlitv.fun/live/arbgunes.stream/playlist.m3u8?hash=60d55cfb12dfea1087a2ed7b28282928"
+    "url": "https://yayin2.canlitv.fun/live/arbgunes.stream/chunklist_w1003373968.m3u8?hash=e67432064e6b83f536cf06cb12a5bed4"
   },
   {
     "name": "ARB 24 TV",
-    "url": "https://yayin2.canlitv.fun/live/arb24.stream/playlist.m3u8?hash=60d55cfb12dfea1087a2ed7b28282928"
+    "url": "https://yayin2.canlitv.fun/live/arb24.stream/chunklist_w1554575891.m3u8?hash=e67432064e6b83f536cf06cb12a5bed4"
   },
   {
     "name": "Medeniyet Tv",
@@ -381,7 +381,7 @@
   },
   {
     "name": "TİVİBU SPOR",
-    "url": "https://andro.evrenesoglu99.click/checklist/androstreamlivets.m3u8"
+    "url": "https://cdn509.canlitv.me/tivibuspor.m3u8?tkn=AaKwmJOmkpqX1aIg0BRnXA&tms=1789862137&hst=www.canlitv.me&ip=85.132.11.118&utkn=78f40838c6b90658f985613c46b5701b&ch=tivibusporcanli-hd"
   },
   {
     "name": "TABİ SPOR",
