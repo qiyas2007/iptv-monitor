@@ -4,11 +4,11 @@ https://tuzcu.canlitv.me/cbcsport.m3u8?tkn=GZj7Cxtu6ArcaH_oCVoZ-A&tms=1789852826
 #EXTINF:-1 tvg-name="TRT 1 ", TRT 1 
 https://tv-trt1.medya.trt.com.tr/master_480.m3u8
 #EXTINF:-1 tvg-name="ATV", ATV
-https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/atv/atv.m3u8
+https://trkvz-live.ercdn.net/atvhd/atvhd_1080p.m3u8?st=uV-CIJx5bXvtldrQH5yH8g&e=1789885277
 #EXTINF:-1 tvg-name="Show TV", Show TV
-http://ciner.daioncdn.net/showtv/showtv_1080p.m3u8?app=showtv_web
+https://ciner.daioncdn.net/showtv/showtv_1080p.m3u8?ex=1664766175&st=RBzhSuGauna0OGld-DJUVA&tv=1&sid=8rk9tj15b718&app=4bc856ef-4c68-4a94-bc87-37dfaaa66558&ce=3
 #EXTINF:-1 tvg-name="Star-TV", Star-TV
-https://dogus.daioncdn.net/startv/startv.m3u8?app=a20ac41e-bdc3-4aa1-934d-26b484480ac9
+https://sivrice.canlitv.me/startv.m3u8?tkn=9NLlnzdX-l3NJVTDHds8Aw&tms=1789854260&hst=www.canlitv.me&ip=85.132.11.118&utkn=78f40838c6b90658f985613c46b5701b&ch=startvcanlihdizle
 #EXTINF:-1 tvg-name="Kanal D", Kanal D
 https://demiroren.daioncdn.net/kanald/kanald_1080p.m3u8?app=kanald_web
 #EXTINF:-1 tvg-name="Euro D", Euro D
@@ -53,10 +53,10 @@ http://cineplus-yesilcam.supersatadmin.workers.dev/cineplusyesilcam.m3u8
 https://host.onlineradyotv.net:8081/sdmtv/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-name="BEGEN TV", BEGEN TV
 https://ip44.radyotelekomtv.com:3958/stream/play.m3u8
-#EXTINF:-1 tvg-name="kanal-65", kanal-65
-https://autopilot.catcast.tv/mobile.m3u8?channel_id=47437&token=867e089ce518aabe7511d1eb104e3fc7&server=v2.catcast.tv
-#EXTINF:-1 tvg-name="now-music", now-music
-https://autopilot.catcast.tv/mobile.m3u8?channel_id=48694&token=7f374089f5809fe3e8ad7a0520fad55a&server=v2.catcast.tv
+#EXTINF:-1 tvg-name="TV8", TV8
+https://tv8.daioncdn.net/tv8/tv8_1080p.m3u8?&sid=8rka60wobzqr&app=7ddc255a-ef47-4e81-ab14-c0e5f2949788&ce=3
+#EXTINF:-1 tvg-name="TV8,5", TV8,5
+https://cdn509.canlitv.me/tv85.m3u8?tkn=BnLXM0X7VOMBcKx0zCSmhQ&tms=1789854778&hst=www.canlitv.me&ip=85.132.11.118&utkn=78f40838c6b90658f985613c46b5701b&ch=tv85canli-hd-izle
 #EXTINF:-1 tvg-name="rihatmusic", rihatmusic
 https://autopilot.catcast.tv/mobile.m3u8?channel_id=48076&token=6fd61e466f37dbf6c2de47140a5beb2d&server=v2.catcast.tv
 #EXTINF:-1 tvg-name="turkuzplay1", turkuzplay1
