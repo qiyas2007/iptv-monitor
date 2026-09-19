@@ -73,10 +73,10 @@ https://sivrice.canlitv.me/minikago.m3u8?tkn=wMVWTZHppwSZsPNbmOyNDg&tms=17898607
 https://autopilot.catcast.tv/mobile.m3u8?channel_id=41327&token=fdce9048317c5e2fb5d994aaab35a812&server=cityeden.catcast.tv
 #EXTINF:-1 tvg-name=" İdman Tv",  İdman Tv
 https://hatun.canlitv.me/idmantv.m3u8?tkn=raCHHVFUoHEA65wdZygSXQ&tms=1789860828&hst=www.canlitv.me&ip=85.132.11.118&utkn=78f40838c6b90658f985613c46b5701b&ch=idmantv-canli-hd
-#EXTINF:-1 tvg-name="PlayerCinema-TV", PlayerCinema-TV
-https://autopilot.catcast.tv/mobile.m3u8?channel_id=50372&token=182926c93b7f93095c2ba3614262ea8b&server=v2.catcast.tv
-#EXTINF:-1 tvg-name="PlayerFilmAzerbaycan-TV", PlayerFilmAzerbaycan-TV
-https://autopilot.catcast.tv/mobile.m3u8?channel_id=50472&token=e5aca65b24394d2381191dddc2f54467&server=v2.catcast.tv
+#EXTINF:-1 tvg-name=" Euro Star",  Euro Star
+https://tuzcu.canlitv.me/eurostar.m3u8?tkn=TwkphhhpN-5usnfn-bntUg&tms=1789861713&hst=www.canlitv.me&ip=85.132.11.118&utkn=78f40838c6b90658f985613c46b5701b&ch=eurostar-canli-hd
+#EXTINF:-1 tvg-name="TRT 2", TRT 2
+https://cdn509.canlitv.me/trt2.m3u8?tkn=ERvxtVr6U8SZUQGxbZ1ARw&tms=1789861539&hst=www.canlitv.me&ip=85.132.11.118&utkn=78f40838c6b90658f985613c46b5701b&ch=trt2canlihd-izle
 #EXTINF:-1 tvg-name="APA Tv", APA Tv
 http://stream.apa.tv/apastream/index.m3u8
 #EXTINF:-1 tvg-name="Ayaz TV", Ayaz TV
@@ -97,8 +97,8 @@ https://str.yodacdn.net/medeniyyettele/index.m3u8
 https://tuzcu.canlitv.me/xezertv.m3u8?tkn=wQqMopHmJ-jB49HWJSgToQ&tms=1789860338&hst=www.canlitv.me&ip=85.132.11.118&utkn=78f40838c6b90658f985613c46b5701b&ch=xezertv
 #EXTINF:-1 tvg-name="360 TV", 360 TV
 https://turkmedya-live.ercdn.net/tv360/tv360.m3u8
-#EXTINF:-1 tvg-name="Cinema", Cinema
-http://catchup.videoline.ru/cinema/playlist.m3u8
+#EXTINF:-1 tvg-name=" ATV Avrupa",  ATV Avrupa
+https://nene.canlitv.me/atvavrupa.m3u8?tkn=4Ycd5w-I8SNntlO5EkKOvA&tms=1789861841&hst=www.canlitv.me&ip=85.132.11.118&utkn=78f40838c6b90658f985613c46b5701b&ch=atvavrupa-canli
 #EXTINF:-1 tvg-name="Dom kino", Dom kino
 http://stream.mcquack.net/236/index.m3u8
 #EXTINF:-1 tvg-name="Evrokino HD", Evrokino HD
@@ -129,8 +129,8 @@ http://hls127.freeott.top:8080/Kinoseriya_HD/video.m3u8
 http://stream.mcquack.net/107/index.m3u8
 #EXTINF:-1 tvg-name="National Geographic", National Geographic
 http://stream.mcquack.net/116/index.m3u8
-#EXTINF:-1 tvg-name="National Geographic Wild", National Geographic Wild
-http://hls127.freeott.top:8080/Nat_Geo_Wild_SD/video.m3u8
+#EXTINF:-1 tvg-name=" FB Tv",  FB Tv
+https://tuzcu.canlitv.me/fbtv.m3u8?tkn=PyIMsbPoUjDXNoRUl0Jtyg&tms=1789862218&hst=www.canlitv.me&ip=85.132.11.118&utkn=78f40838c6b90658f985613c46b5701b&ch=fbtv
 #EXTINF:-1 tvg-name="Nauka", Nauka
 http://stream.mcquack.net/125/index.m3u8
 #EXTINF:-1 tvg-name="Ostrosyuzhetnoye HD", Ostrosyuzhetnoye HD
@@ -164,11 +164,11 @@ https://sivrice.canlitv.me/beinsporthaber.m3u8?tkn=pQ5aKbHVZp5ruNoQzyE8qQ&tms=17
 #EXTINF:-1 tvg-name="Atv Azad TV", Atv Azad TV
 https://lives.atv.az:5443/ATV_TV_STREAM/streams/atvcanli.m3u8
 #EXTINF:-1 tvg-name="ARB TV", ARB TV
-https://yayin2.canlitv.fun/live/arb.stream/playlist.m3u8?hash=60d55cfb12dfea1087a2ed7b28282928
+https://cdn509.canlitv.me/arbtv.m3u8?tkn=11XUly5yPxc56OJGS-IcaA&tms=1789862415&hst=www.canlitv.me&ip=85.132.11.118&utkn=78f40838c6b90658f985613c46b5701b&ch=arbtv-canli-hd
 #EXTINF:-1 tvg-name="ARB Gunes TV", ARB Gunes TV
-https://yayin2.canlitv.fun/live/arbgunes.stream/playlist.m3u8?hash=60d55cfb12dfea1087a2ed7b28282928
+https://yayin2.canlitv.fun/live/arbgunes.stream/chunklist_w1003373968.m3u8?hash=e67432064e6b83f536cf06cb12a5bed4
 #EXTINF:-1 tvg-name="ARB 24 TV", ARB 24 TV
-https://yayin2.canlitv.fun/live/arb24.stream/playlist.m3u8?hash=60d55cfb12dfea1087a2ed7b28282928
+https://yayin2.canlitv.fun/live/arb24.stream/chunklist_w1554575891.m3u8?hash=e67432064e6b83f536cf06cb12a5bed4
 #EXTINF:-1 tvg-name="Medeniyet Tv", Medeniyet Tv
 https://hatun.canlitv.vin/medeniyettv.m3u8?tkn=z7s7vx-P6gx29EbW9PzP2A&tms=1789059735&hst=www.canlitv.vin&ip=85.132.11.118&utkn=8c7c6ee15ecb51e94c718ee31a6249f2&ch=medeniyet-tv
 #EXTINF:-1 tvg-name="Gunaz Tv", Gunaz Tv
@@ -190,7 +190,7 @@ https://corestream.d72377a9ds0ec24.cfd//s-sport/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-name="S SPORT PLUS", S SPORT PLUS
 https://andro.evrenesoglu99.click/checklist/androstreamlivessplus1.m3u8
 #EXTINF:-1 tvg-name="TİVİBU SPOR", TİVİBU SPOR
-https://andro.evrenesoglu99.click/checklist/androstreamlivets.m3u8
+https://cdn509.canlitv.me/tivibuspor.m3u8?tkn=AaKwmJOmkpqX1aIg0BRnXA&tms=1789862137&hst=www.canlitv.me&ip=85.132.11.118&utkn=78f40838c6b90658f985613c46b5701b&ch=tivibusporcanli-hd
 #EXTINF:-1 tvg-name="TABİ SPOR", TABİ SPOR
 https://andro.evrenesoglu99.click/checklist/androstreamlivetb.m3u8
 #EXTINF:-1 tvg-name="TELE1", TELE1
