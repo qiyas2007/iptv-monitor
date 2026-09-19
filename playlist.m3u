@@ -1,6 +1,6 @@
 #EXTM3U
 #EXTINF:-1 tvg-name="CBC SPORT", CBC SPORT
-https://cbcsports-live.lg.mncdn.com/cbcsports_live/cbcsports/chunklist.m3u8
+https://tuzcu.canlitv.me/cbcsport.m3u8?tkn=GZj7Cxtu6ArcaH_oCVoZ-A&tms=1789852826&hst=www.canlitv.me&ip=85.132.11.118&utkn=78f40838c6b90658f985613c46b5701b&ch=cbcsport-hd
 #EXTINF:-1 tvg-name="TRT 1 ", TRT 1 
 https://tv-trt1.medya.trt.com.tr/master_480.m3u8
 #EXTINF:-1 tvg-name="ATV", ATV
