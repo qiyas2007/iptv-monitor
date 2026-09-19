@@ -55,24 +55,24 @@ https://host.onlineradyotv.net:8081/sdmtv/tracks-v1a1/mono.m3u8
 https://ip44.radyotelekomtv.com:3958/stream/play.m3u8
 #EXTINF:-1 tvg-name="TV8", TV8
 https://tv8.daioncdn.net/tv8/tv8_1080p.m3u8?&sid=8rka60wobzqr&app=7ddc255a-ef47-4e81-ab14-c0e5f2949788&ce=3
-#EXTINF:-1 tvg-name="TV8,5", TV8,5
+#EXTINF:-1 tvg-name="TV 8,5", TV 8,5
 https://cdn509.canlitv.me/tv85.m3u8?tkn=BnLXM0X7VOMBcKx0zCSmhQ&tms=1789854778&hst=www.canlitv.me&ip=85.132.11.118&utkn=78f40838c6b90658f985613c46b5701b&ch=tv85canli-hd-izle
-#EXTINF:-1 tvg-name="rihatmusic", rihatmusic
-https://autopilot.catcast.tv/mobile.m3u8?channel_id=48076&token=6fd61e466f37dbf6c2de47140a5beb2d&server=v2.catcast.tv
-#EXTINF:-1 tvg-name="turkuzplay1", turkuzplay1
-https://autopilot.catcast.tv/mobile.m3u8?channel_id=48591&token=585fec45a75f0eff8af042e52efc2b85&server=v2.catcast.tv
+#EXTINF:-1 tvg-name="TV2", TV2
+https://demiroren.daioncdn.net/teve2/teve2_1080p.m3u8?&sid=8rkhn1wvozak&app=6aab838a-437e-4a1b-bbd0-e30f79cdbbbd&ce=3
+#EXTINF:-1 tvg-name="TRT Çocuk", TRT Çocuk
+https://hatun.canlitv.me/trtcocuk.m3u8?tkn=2A5xeJV6VEFKm33Eq2mY5Q&tms=1789860617&hst=www.canlitv.me&ip=85.132.11.118&utkn=78f40838c6b90658f985613c46b5701b&ch=trtcocuk-canli-hd
 #EXTINF:-1 tvg-name="kino-1", kino-1
 https://autopilot.catcast.tv/mobile.m3u8?channel_id=38617&token=912b6a06f2771f7d5cfa53d27d3ab364&server=kino-1.catcast.tv
-#EXTINF:-1 tvg-name="Komedi-az-TV", Komedi-az-TV
-https://autopilot.catcast.tv/mobile.m3u8?channel_id=50370&token=35bf3b6f88d2049faac91ee53ffce4b9&server=v2.catcast.tv
-#EXTINF:-1 tvg-name="Strax-TV", Strax-TV
-https://s.catcast.tv/content/34816/index.m3u8?token=70def881322b841dd87696657874523d
-#EXTINF:-1 tvg-name="Fenix SSSR", Fenix SSSR
-https://autopilot.catcast.tv/mobile.m3u8?channel_id=40102&token=7985bf557ea0e302a5655823284b8011&server=v2.catcast.tv
+#EXTINF:-1 tvg-name="Cartoon Network", Cartoon Network
+https://hatun.canlitv.me/cartoon.m3u8?tkn=t3B3b_srmtzMkZVJKU2FyA&tms=1789860664&hst=www.canlitv.me&ip=85.132.11.118&utkn=78f40838c6b90658f985613c46b5701b&ch=cartoonnetwork
+#EXTINF:-1 tvg-name=" Minika Çocuk",  Minika Çocuk
+https://maden.canlitv.me/minikacocuk.m3u8?tkn=fu_stAPlePQU4vBBNoliow&tms=1789860729&hst=www.canlitv.me&ip=85.132.11.118&utkn=78f40838c6b90658f985613c46b5701b&ch=minikacocuk-hd
+#EXTINF:-1 tvg-name=" Minika Go",  Minika Go
+https://sivrice.canlitv.me/minikago.m3u8?tkn=wMVWTZHppwSZsPNbmOyNDg&tms=1789860767&hst=www.canlitv.me&ip=85.132.11.118&utkn=78f40838c6b90658f985613c46b5701b&ch=minikago-canli-hd
 #EXTINF:-1 tvg-name="Detektiv-TV", Detektiv-TV
 https://autopilot.catcast.tv/mobile.m3u8?channel_id=41327&token=fdce9048317c5e2fb5d994aaab35a812&server=cityeden.catcast.tv
-#EXTINF:-1 tvg-name="Action-TV", Action-TV
-https://autopilot.catcast.tv/mobile.m3u8?channel_id=36517&token=6e29230a6d25c65dec2007d09339c33b&server=v2.catcast.tv
+#EXTINF:-1 tvg-name=" İdman Tv",  İdman Tv
+https://hatun.canlitv.me/idmantv.m3u8?tkn=raCHHVFUoHEA65wdZygSXQ&tms=1789860828&hst=www.canlitv.me&ip=85.132.11.118&utkn=78f40838c6b90658f985613c46b5701b&ch=idmantv-canli-hd
 #EXTINF:-1 tvg-name="PlayerCinema-TV", PlayerCinema-TV
 https://autopilot.catcast.tv/mobile.m3u8?channel_id=50372&token=182926c93b7f93095c2ba3614262ea8b&server=v2.catcast.tv
 #EXTINF:-1 tvg-name="PlayerFilmAzerbaycan-TV", PlayerFilmAzerbaycan-TV
@@ -94,7 +94,7 @@ http://85.132.78.122:8050/hls/stream/index.m3u8
 #EXTINF:-1 tvg-name="Medeniyyet TV", Medeniyyet TV
 https://str.yodacdn.net/medeniyyettele/index.m3u8
 #EXTINF:-1 tvg-name="Xezer TV", Xezer TV
-https://www.xezerxeber.az/stream/index.m3u8
+https://tuzcu.canlitv.me/xezertv.m3u8?tkn=wQqMopHmJ-jB49HWJSgToQ&tms=1789860338&hst=www.canlitv.me&ip=85.132.11.118&utkn=78f40838c6b90658f985613c46b5701b&ch=xezertv
 #EXTINF:-1 tvg-name="360 TV", 360 TV
 https://turkmedya-live.ercdn.net/tv360/tv360.m3u8
 #EXTINF:-1 tvg-name="Cinema", Cinema
