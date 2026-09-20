@@ -1,7 +1,7 @@
 [
   {
     "name": "CBC SPORT",
-    "url": "https://maden.canlitv.vin/cbcsport.m3u8?tkn=M34fV51-HFCiVAp3tmky-g&tms=1789906474&hst=www.canlitv.vin&ip=85.132.11.118&utkn=78f40838c6b90658f985613c46b5701b&ch=cbcsport-canli-yayin"
+    "url": "https://cbcsport.tvstream.az/hls/stream3/stream.m3u8"
   },
   {
     "name": "TRT 1 ",
@@ -9,7 +9,7 @@
   },
   {
     "name": "ATV",
-    "url": "https://nene.livestream.ad/atv.m3u8?tkn=uvGUMWgzx18JO8YAyIqHzQ&tms=1789906537&hst=de.livestream.ad&ip=85.132.11.118&utkn=78f40838c6b90658f985613c46b5701b&ch=atv-live"
+    "url": "https://trkvz-live.ercdn.net/atvhd/atvhd_1080p.m3u8?st=FT6iXjGQoxn0jYnk69JKJQ&e=1789969953"
   },
   {
     "name": "Show TV",
@@ -17,7 +17,7 @@
   },
   {
     "name": "Star-TV",
-    "url": "https://tuzcu.livestream.ad/startv.m3u8?tkn=8qiiRawvGSU03-76hfPSZQ&tms=1789906072&hst=de.livestream.ad&ip=85.132.11.118&utkn=78f40838c6b90658f985613c46b5701b&ch=star-tv"
+    "url": "https://dogus.daioncdn.net/startv/startv_720p.m3u8?&sid=8rns0piynyt9&app=a20ac41e-bdc3-4aa1-934d-26b484480ac9&ce=3"
   },
   {
     "name": "Kanal D",
@@ -145,7 +145,7 @@
   },
   {
     "name": " İdman Tv",
-    "url": "https://hatun.canlitv.me/idmantv.m3u8?tkn=raCHHVFUoHEA65wdZygSXQ&tms=1789860828&hst=www.canlitv.me&ip=85.132.11.118&utkn=78f40838c6b90658f985613c46b5701b&ch=idmantv-canli-hd"
+    "url": "https://idman.tvstream.az/hls/stream4/stream.m3u8"
   },
   {
     "name": " Euro Star",
@@ -189,7 +189,7 @@
   },
   {
     "name": "Xezer TV",
-    "url": "https://nene.livestream.ad/xezertv.m3u8?tkn=TmqgCftSyhkspOF-pca0XA&tms=1789906379&hst=de.livestream.ad&ip=85.132.11.118&utkn=78f40838c6b90658f985613c46b5701b&ch=xezer-tv-live"
+    "url": "https://xezer.tvstream.az/hls/stream/main_stream.m3u8"
   },
   {
     "name": "360 TV",
@@ -260,8 +260,8 @@
     "url": "http://stream.mcquack.net/116/index.m3u8"
   },
   {
-    "name": " FB Tv",
-    "url": "https://tuzcu.canlitv.me/fbtv.m3u8?tkn=PyIMsbPoUjDXNoRUl0Jtyg&tms=1789862218&hst=www.canlitv.me&ip=85.132.11.118&utkn=78f40838c6b90658f985613c46b5701b&ch=fbtv"
+    "name": " REAL TV",
+    "url": "https://realtv.tvstream.az/hls/stream2/stream.m3u8"
   },
   {
     "name": "Nauka",
@@ -321,7 +321,7 @@
   },
   {
     "name": "Bein Sports",
-    "url": "https://sivrice.canlitv.me/beinsporthaber.m3u8?tkn=pQ5aKbHVZp5ruNoQzyE8qQ&tms=1789142591&hst=www.canlitv.me&ip=85.132.11.118&utkn=8c7c6ee15ecb51e94c718ee31a6249f2&ch=beinsportshaber-hd"
+    "url": "https://e-aga-m.943411d29aa8b67a6485827229af8b16.sbs/cefc8a875b06cc6da16ca7dd99157dee/DmodYM9CdSNPUZyc2x7VWd/5062/e-aga-t.943411d29aa8b67a6485827229af8b16.sbs/chunklist_hd.m3u8"
   },
   {
     "name": "Atv Azad TV",
